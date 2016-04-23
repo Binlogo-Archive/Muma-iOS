@@ -10,6 +10,11 @@ import UIKit
 
 class MumaConfig {
     
+    struct CellIdentifier {
+        static let userInfoTextCell = "UserInfoTextCell"
+        static let userInfoIconCell = "UserInfoIconCell"
+    }
+    
     static let forcedHideActivityIndicatorTimeInterval: NSTimeInterval = 30
     
     struct MetaData {
@@ -26,6 +31,10 @@ class MumaConfig {
         static let blurredThumbnailString = "blurred_thumbnail_string"
         
         static let thumbnailMaxSize: CGFloat = 60
+    }
+    
+    struct UserInfo {
+        static let headerViewHeight:CGFloat = 230
     }
     
     class func clientType() -> Int {

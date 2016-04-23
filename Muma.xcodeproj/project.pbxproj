@@ -18,7 +18,7 @@
 		642FBEAC1CBE384D00F32C27 /* MZFayeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEA91CBE384D00F32C27 /* MZFayeClient.m */; };
 		642FBEAD1CBE384D00F32C27 /* MZFayeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEAB1CBE384D00F32C27 /* MZFayeMessage.m */; };
 		642FBEB61CBE399700F32C27 /* FayeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEB51CBE399700F32C27 /* FayeService.swift */; };
-		642FBEB81CBE4CAF00F32C27 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEB71CBE4CAF00F32C27 /* BaseViewController.swift */; };
+		642FBEB81CBE4CAF00F32C27 /* MumaNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEB71CBE4CAF00F32C27 /* MumaNavigationController.swift */; };
 		642FBEBA1CC0B84A00F32C27 /* MumaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEB91CC0B84A00F32C27 /* MumaAlert.swift */; };
 		642FBEBC1CC0C11B00F32C27 /* MumaAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEBB1CC0C11B00F32C27 /* MumaAsset.swift */; };
 		642FBEBE1CC0C1BD00F32C27 /* MumaHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEBD1CC0C1BD00F32C27 /* MumaHUD.swift */; };
@@ -26,6 +26,18 @@
 		642FBEC21CC0C38500F32C27 /* MumaMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEC11CC0C38500F32C27 /* MumaMedia.swift */; };
 		642FBEC51CC0CD2000F32C27 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEC41CC0CD2000F32C27 /* UserAvatar.swift */; };
 		642FBEC91CC0CE1100F32C27 /* NSFileManager+Muma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEC81CC0CE1100F32C27 /* NSFileManager+Muma.swift */; };
+		642FBECF1CC0EB4D00F32C27 /* WorkshopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBECE1CC0EB4D00F32C27 /* WorkshopViewController.swift */; };
+		642FBED11CC0EB7900F32C27 /* CraftsmenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBED01CC0EB7900F32C27 /* CraftsmenViewController.swift */; };
+		642FBED31CC0EB9100F32C27 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBED21CC0EB9100F32C27 /* CommunityViewController.swift */; };
+		642FBEDA1CC0F23100F32C27 /* UserInfoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBED91CC0F23100F32C27 /* UserInfoTextCell.swift */; };
+		642FBEDC1CC0F40400F32C27 /* UserInfoIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEDB1CC0F40400F32C27 /* UserInfoIconCell.swift */; };
+		642FBEE01CC0F74700F32C27 /* UIScrollView+APParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEDF1CC0F74700F32C27 /* UIScrollView+APParallaxHeader.m */; };
+		642FBEE31CC1C02300F32C27 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEE21CC1C02300F32C27 /* UserInfoViewController.swift */; };
+		642FBEE51CC1C45100F32C27 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEE41CC1C45100F32C27 /* UserHeaderView.swift */; };
+		642FBEEC1CC1E35700F32C27 /* PlainAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEEB1CC1E35700F32C27 /* PlainAvatar.swift */; };
+		642FBEEE1CC202A500F32C27 /* TempImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642FBEED1CC202A500F32C27 /* TempImage.xcassets */; };
+		64601F9E1CC20CE700675670 /* MumaUtilKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64601F9D1CC20CE700675670 /* MumaUtilKit.swift */; };
+		646896621CCA23A600D48F6A /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646896611CCA23A600D48F6A /* ParseService.swift */; };
 		648F3FA51CBB2646005B377F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F3FA41CBB2646005B377F /* AppDelegate.swift */; };
 		648F3FAC1CBB2646005B377F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648F3FAB1CBB2646005B377F /* Assets.xcassets */; };
 		648F3FAF1CBB2646005B377F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648F3FAD1CBB2646005B377F /* LaunchScreen.storyboard */; };
@@ -75,7 +87,7 @@
 		642FBEAB1CBE384D00F32C27 /* MZFayeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFayeMessage.m; sourceTree = "<group>"; };
 		642FBEB41CBE38EA00F32C27 /* Muma-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Muma-Bridging-Header.h"; sourceTree = "<group>"; };
 		642FBEB51CBE399700F32C27 /* FayeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FayeService.swift; sourceTree = "<group>"; };
-		642FBEB71CBE4CAF00F32C27 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		642FBEB71CBE4CAF00F32C27 /* MumaNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaNavigationController.swift; sourceTree = "<group>"; };
 		642FBEB91CC0B84A00F32C27 /* MumaAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaAlert.swift; sourceTree = "<group>"; };
 		642FBEBB1CC0C11B00F32C27 /* MumaAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaAsset.swift; sourceTree = "<group>"; };
 		642FBEBD1CC0C1BD00F32C27 /* MumaHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaHUD.swift; sourceTree = "<group>"; };
@@ -83,6 +95,19 @@
 		642FBEC11CC0C38500F32C27 /* MumaMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaMedia.swift; sourceTree = "<group>"; };
 		642FBEC41CC0CD2000F32C27 /* UserAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
 		642FBEC81CC0CE1100F32C27 /* NSFileManager+Muma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+Muma.swift"; sourceTree = "<group>"; };
+		642FBECE1CC0EB4D00F32C27 /* WorkshopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopViewController.swift; sourceTree = "<group>"; };
+		642FBED01CC0EB7900F32C27 /* CraftsmenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraftsmenViewController.swift; sourceTree = "<group>"; };
+		642FBED21CC0EB9100F32C27 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		642FBED91CC0F23100F32C27 /* UserInfoTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTextCell.swift; sourceTree = "<group>"; };
+		642FBEDB1CC0F40400F32C27 /* UserInfoIconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoIconCell.swift; sourceTree = "<group>"; };
+		642FBEDE1CC0F74700F32C27 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
+		642FBEDF1CC0F74700F32C27 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
+		642FBEE21CC1C02300F32C27 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		642FBEE41CC1C45100F32C27 /* UserHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
+		642FBEEB1CC1E35700F32C27 /* PlainAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainAvatar.swift; sourceTree = "<group>"; };
+		642FBEED1CC202A500F32C27 /* TempImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TempImage.xcassets; sourceTree = "<group>"; };
+		64601F9D1CC20CE700675670 /* MumaUtilKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaUtilKit.swift; sourceTree = "<group>"; };
+		646896611CCA23A600D48F6A /* ParseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
 		648F3FA11CBB2646005B377F /* Muma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		648F3FA41CBB2646005B377F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		648F3FAB1CBB2646005B377F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +189,7 @@
 		642FBEA31CBE259F00F32C27 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				64601F9D1CC20CE700675670 /* MumaUtilKit.swift */,
 				642FBEBF1CC0C26C00F32C27 /* MumaConfig.swift */,
 				642FBEB91CC0B84A00F32C27 /* MumaAlert.swift */,
 				642FBEA41CBE25C800F32C27 /* MumaUserDefaults.swift */,
@@ -178,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				642FBEA71CBE384D00F32C27 /* MZFayeClient */,
+				642FBEDD1CC0F74700F32C27 /* APParallaxHeader */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -197,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				642FBEC41CC0CD2000F32C27 /* UserAvatar.swift */,
+				642FBEEB1CC1E35700F32C27 /* PlainAvatar.swift */,
 			);
 			path = Caches;
 			sourceTree = "<group>";
@@ -207,6 +235,80 @@
 				642FBEC81CC0CE1100F32C27 /* NSFileManager+Muma.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		642FBECA1CC0E7F900F32C27 /* Workshop */ = {
+			isa = PBXGroup;
+			children = (
+				642FBECE1CC0EB4D00F32C27 /* WorkshopViewController.swift */,
+			);
+			path = Workshop;
+			sourceTree = "<group>";
+		};
+		642FBECB1CC0E91600F32C27 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				642FBED21CC0EB9100F32C27 /* CommunityViewController.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		642FBECC1CC0E91600F32C27 /* Craftsmen */ = {
+			isa = PBXGroup;
+			children = (
+				642FBED01CC0EB7900F32C27 /* CraftsmenViewController.swift */,
+			);
+			path = Craftsmen;
+			sourceTree = "<group>";
+		};
+		642FBECD1CC0E91600F32C27 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		642FBED61CC0F13900F32C27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				642FBEE61CC1C46100F32C27 /* Common */,
+				642FBED81CC0F20600F32C27 /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		642FBED81CC0F20600F32C27 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				642FBED91CC0F23100F32C27 /* UserInfoTextCell.swift */,
+				642FBEDB1CC0F40400F32C27 /* UserInfoIconCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		642FBEDD1CC0F74700F32C27 /* APParallaxHeader */ = {
+			isa = PBXGroup;
+			children = (
+				642FBEDE1CC0F74700F32C27 /* UIScrollView+APParallaxHeader.h */,
+				642FBEDF1CC0F74700F32C27 /* UIScrollView+APParallaxHeader.m */,
+			);
+			path = APParallaxHeader;
+			sourceTree = "<group>";
+		};
+		642FBEE11CC1BFF900F32C27 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				642FBEE21CC1C02300F32C27 /* UserInfoViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		642FBEE61CC1C46100F32C27 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				642FBEE41CC1C45100F32C27 /* UserHeaderView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		648F3F981CBB2646005B377F = {
@@ -242,10 +344,12 @@
 				648F3FDD1CBDF459005B377F /* Services */,
 				642FBEC31CC0CD1100F32C27 /* Caches */,
 				642FBEC61CC0CDBB00F32C27 /* Extentions */,
+				642FBED61CC0F13900F32C27 /* Views */,
 				648F3FD51CBDF459005B377F /* Controllers */,
 				648F3FE01CBDF459005B377F /* Storyboards */,
 				648F3FAB1CBB2646005B377F /* Assets.xcassets */,
 				648F3FDF1CBDF459005B377F /* Show.xcassets */,
+				642FBEED1CC202A500F32C27 /* TempImage.xcassets */,
 				648F3FAD1CBB2646005B377F /* LaunchScreen.storyboard */,
 				648F3FB01CBB2646005B377F /* Info.plist */,
 			);
@@ -274,7 +378,12 @@
 			isa = PBXGroup;
 			children = (
 				648F3FD61CBDF459005B377F /* Base */,
+				642FBEE11CC1BFF900F32C27 /* Common */,
 				648F3FD71CBDF459005B377F /* Welcome */,
+				642FBECA1CC0E7F900F32C27 /* Workshop */,
+				642FBECC1CC0E91600F32C27 /* Craftsmen */,
+				642FBECB1CC0E91600F32C27 /* Community */,
+				642FBECD1CC0E91600F32C27 /* Mine */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,7 +391,7 @@
 		648F3FD61CBDF459005B377F /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				642FBEB71CBE4CAF00F32C27 /* BaseViewController.swift */,
+				642FBEB71CBE4CAF00F32C27 /* MumaNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -305,6 +414,7 @@
 				642FBE961CBE1A3300F32C27 /* MumaNetworking.swift */,
 				648F3FDE1CBDF459005B377F /* MumaService.swift */,
 				642FBEB51CBE399700F32C27 /* FayeService.swift */,
+				646896611CCA23A600D48F6A /* ParseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -430,6 +540,7 @@
 				648F3FAC1CBB2646005B377F /* Assets.xcassets in Resources */,
 				648F3FE91CBDF459005B377F /* Show.xcassets in Resources */,
 				648F3FEB1CBDF459005B377F /* Welcome.storyboard in Resources */,
+				642FBEEE1CC202A500F32C27 /* TempImage.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,27 +614,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				642FBEAC1CBE384D00F32C27 /* MZFayeClient.m in Sources */,
+				646896621CCA23A600D48F6A /* ParseService.swift in Sources */,
 				642FBEC91CC0CE1100F32C27 /* NSFileManager+Muma.swift in Sources */,
 				642FBE9E1CBE1F0200F32C27 /* Group.swift in Sources */,
 				642FBEBE1CC0C1BD00F32C27 /* MumaHUD.swift in Sources */,
+				642FBEDC1CC0F40400F32C27 /* UserInfoIconCell.swift in Sources */,
 				648F3FE31CBDF459005B377F /* ShowStepGeniusViewController.swift in Sources */,
+				642FBECF1CC0EB4D00F32C27 /* WorkshopViewController.swift in Sources */,
 				642FBE971CBE1A3300F32C27 /* MumaNetworking.swift in Sources */,
 				648F3FE71CBDF459005B377F /* ShowViewController.swift in Sources */,
-				642FBEB81CBE4CAF00F32C27 /* BaseViewController.swift in Sources */,
+				642FBEB81CBE4CAF00F32C27 /* MumaNavigationController.swift in Sources */,
 				648F3FE61CBDF459005B377F /* ShowStepViewController.swift in Sources */,
+				642FBED11CC0EB7900F32C27 /* CraftsmenViewController.swift in Sources */,
+				642FBEEC1CC1E35700F32C27 /* PlainAvatar.swift in Sources */,
 				648F3FE81CBDF459005B377F /* MumaService.swift in Sources */,
+				642FBEE51CC1C45100F32C27 /* UserHeaderView.swift in Sources */,
 				642FBEA51CBE25C800F32C27 /* MumaUserDefaults.swift in Sources */,
 				642FBEC21CC0C38500F32C27 /* MumaMedia.swift in Sources */,
+				642FBEE31CC1C02300F32C27 /* UserInfoViewController.swift in Sources */,
 				648F3FE51CBDF459005B377F /* ShowStepMeetViewController.swift in Sources */,
 				642FBEB61CBE399700F32C27 /* FayeService.swift in Sources */,
+				642FBEDA1CC0F23100F32C27 /* UserInfoTextCell.swift in Sources */,
 				642FBE9A1CBE1D1B00F32C27 /* Realm.swift in Sources */,
 				648F3FA51CBB2646005B377F /* AppDelegate.swift in Sources */,
 				642FBEAD1CBE384D00F32C27 /* MZFayeMessage.m in Sources */,
 				642FBEA01CBE1F6600F32C27 /* Message.swift in Sources */,
+				64601F9E1CC20CE700675670 /* MumaUtilKit.swift in Sources */,
+				642FBED31CC0EB9100F32C27 /* CommunityViewController.swift in Sources */,
 				642FBEC51CC0CD2000F32C27 /* UserAvatar.swift in Sources */,
 				642FBE9C1CBE1D8700F32C27 /* User.swift in Sources */,
 				642FBEC01CC0C26C00F32C27 /* MumaConfig.swift in Sources */,
 				648F3FE41CBDF459005B377F /* ShowStepMatchViewController.swift in Sources */,
+				642FBEE01CC0F74700F32C27 /* UIScrollView+APParallaxHeader.m in Sources */,
 				642FBEBA1CC0B84A00F32C27 /* MumaAlert.swift in Sources */,
 				642FBEBC1CC0C11B00F32C27 /* MumaAsset.swift in Sources */,
 				642FBEA21CBE1F8A00F32C27 /* Conversation.swift in Sources */,

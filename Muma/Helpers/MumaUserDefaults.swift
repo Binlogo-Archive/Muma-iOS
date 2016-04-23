@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import RealmSwift
 import CoreSpotlight
+import RealmSwift
 
 private let v1AccessTokenKey = "v1AccessToken"
 private let userIDKey = "userID"

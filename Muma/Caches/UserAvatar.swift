@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import RealmSwift
 import Navi
+import RealmSwift
 
 let miniAvatarStyle: AvatarStyle = .RoundedRectangle(size: CGSize(width: 60, height: 60), cornerRadius: 30, borderWidth: 0)
 let nanoAvatarStyle: AvatarStyle = .RoundedRectangle(size: CGSize(width: 40, height: 40), cornerRadius: 20, borderWidth: 0)

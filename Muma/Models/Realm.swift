@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 import RealmSwift
 
 // Realm 队列，总在这个队列操作模型

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 let fayeQueue = dispatch_queue_create("top.Binboy.fayeQueue", DISPATCH_QUEUE_SERIAL)
 

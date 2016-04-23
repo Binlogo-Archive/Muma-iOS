@@ -18,14 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let welcomeStoryboard = UIStoryboard.init(name: "Welcome", bundle: nil);
-        let welcomeVC = welcomeStoryboard.instantiateInitialViewController();
-        
-        self.window?.rootViewController = welcomeVC;
-        
-        self.window?.makeKeyAndVisible();
+//        let welcomeStoryboard = UIStoryboard.init(name: "Welcome", bundle: nil);
+//        let welcomeVC = welcomeStoryboard.instantiateInitialViewController();
+//        
+//        self.window?.rootViewController = welcomeVC;
+//        
+//        self.window?.makeKeyAndVisible();
         
         FayeService.sharedManager.startConnect();
+        ParseServer.sharedManager.startConnect();
         
         return true
     }

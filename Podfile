@@ -4,7 +4,7 @@ use_frameworks!
 
 target 'Muma' do
 
-    pod 'RealmSwift'
+    pod 'Parse'
     pod 'Navi'
     pod 'Kanna'
     pod 'Alamofire'

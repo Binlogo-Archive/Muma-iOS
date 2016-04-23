@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import Parse
 
 enum UserFriendState: Int {
     case Stranger      = 0   // 陌生人
@@ -25,11 +26,23 @@ class Avatar: Object {
     dynamic var roundMini: NSData = NSData() // 60
     dynamic var roundNano: NSData = NSData() // 40
     
-    //    var user: User? {
-    //        let users = linkingObjects(User.self, forProperty: "avatar")
-    //        return users.first
-    //    }
+    var user: User? {
+        let users = linkingObjects(User.self, forProperty: "avatar")
+        return users.first
+    }
 }
+
+//class Avatar: PFObject {
+//    dynamic var avatarURLString: String = ""
+//    dynamic var avatarFileName: String = ""
+//
+//    dynamic var roundMini: NSData = NSData() // 60
+//    dynamic var roundNano: NSData = NSData() // 40
+//    
+//    override var parseClassName: String {
+//        return "Avatar"
+//    }
+//}
 
 class UserSocialAccountProvider: Object {
     dynamic var name: String = ""
@@ -117,15 +130,6 @@ class User: Object {
     // 级联删除关联的数据对象
     
     func cascadeDeleteInRealm(realm: Realm) {
-        
-        if let avatar = avatar {
-            
-            //            if !avatar.avatarFileName.isEmpty {
-            //                NSFileManager.deleteAvatarImageWithName(avatar.avatarFileName)
-            //            }
-            
-            realm.delete(avatar)
-        }
         
         socialAccountProviders.forEach({realm.delete($0)})
         

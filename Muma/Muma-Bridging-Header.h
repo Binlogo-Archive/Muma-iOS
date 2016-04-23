@@ -10,5 +10,6 @@
 #define Muma_Bridging_Header_h
 
 #import "MZFayeClient.h"
+#import "UIScrollView+APParallaxHeader.h"
 
 #endif /* Muma_Bridging_Header_h */
