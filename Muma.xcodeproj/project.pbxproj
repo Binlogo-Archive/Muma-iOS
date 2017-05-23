@@ -17,7 +17,7 @@
 		642FBEC51CC0CD2000F32C27 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEC41CC0CD2000F32C27 /* UserAvatar.swift */; };
 		642FBEC91CC0CE1100F32C27 /* NSFileManager+Muma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEC81CC0CE1100F32C27 /* NSFileManager+Muma.swift */; };
 		642FBECF1CC0EB4D00F32C27 /* WorkshopRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBECE1CC0EB4D00F32C27 /* WorkshopRootViewController.swift */; };
-		642FBED11CC0EB7900F32C27 /* CraftsmenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBED01CC0EB7900F32C27 /* CraftsmenViewController.swift */; };
+		642FBED11CC0EB7900F32C27 /* CraftsmenRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBED01CC0EB7900F32C27 /* CraftsmenRootViewController.swift */; };
 		642FBED31CC0EB9100F32C27 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBED21CC0EB9100F32C27 /* CommunityViewController.swift */; };
 		642FBEDA1CC0F23100F32C27 /* UserInfoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBED91CC0F23100F32C27 /* UserInfoTextCell.swift */; };
 		642FBEDC1CC0F40400F32C27 /* UserInfoIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEDB1CC0F40400F32C27 /* UserInfoIconCell.swift */; };
@@ -70,11 +70,23 @@
 		64A631CC1ED46DF300FE6CB4 /* SearchMusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A631C71ED46DF300FE6CB4 /* SearchMusicCell.swift */; };
 		64A631CD1ED46DF300FE6CB4 /* SearchPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A631C81ED46DF300FE6CB4 /* SearchPictureCell.swift */; };
 		64A631CE1ED46DF300FE6CB4 /* SearchReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A631C91ED46DF300FE6CB4 /* SearchReadCell.swift */; };
-		64A631D41ED4711100FE6CB4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A631D01ED4711100FE6CB4 /* Home.storyboard */; };
-		64A631D51ED4711100FE6CB4 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A631D11ED4711100FE6CB4 /* Movie.storyboard */; };
-		64A631D61ED4711100FE6CB4 /* Music.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A631D21ED4711100FE6CB4 /* Music.storyboard */; };
-		64A631D71ED4711100FE6CB4 /* Read.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A631D31ED4711100FE6CB4 /* Read.storyboard */; };
+		64A631D41ED4711100FE6CB4 /* Workshop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A631D01ED4711100FE6CB4 /* Workshop.storyboard */; };
+		64A631D51ED4711100FE6CB4 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A631D11ED4711100FE6CB4 /* Mine.storyboard */; };
+		64A631D61ED4711100FE6CB4 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A631D21ED4711100FE6CB4 /* Community.storyboard */; };
+		64A631D71ED4711100FE6CB4 /* Craftsmen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A631D31ED4711100FE6CB4 /* Craftsmen.storyboard */; };
 		64A631DA1ED4714300FE6CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A631D81ED4714300FE6CB4 /* Main.storyboard */; };
+		64A631FC1ED47FCF00FE6CB4 /* Bradley Hand Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64A631DD1ED47FCF00FE6CB4 /* Bradley Hand Bold.ttf */; };
+		64A631FD1ED47FCF00FE6CB4 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64A631DF1ED47FCF00FE6CB4 /* 1.gif */; };
+		64A631FE1ED47FCF00FE6CB4 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64A631E01ED47FCF00FE6CB4 /* 2.gif */; };
+		64A631FF1ED47FCF00FE6CB4 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64A631E11ED47FCF00FE6CB4 /* 3.gif */; };
+		64A632001ED47FCF00FE6CB4 /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64A631E21ED47FCF00FE6CB4 /* 4.gif */; };
+		64A632011ED47FCF00FE6CB4 /* my_player_action.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64A631E31ED47FCF00FE6CB4 /* my_player_action.gif */; };
+		64A632021ED47FCF00FE6CB4 /* my_player_action_white.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64A631E41ED47FCF00FE6CB4 /* my_player_action_white.gif */; };
+		64A632031ED47FCF00FE6CB4 /* my_player_stop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64A631E51ED47FCF00FE6CB4 /* my_player_stop.gif */; };
+		64A632041ED47FCF00FE6CB4 /* my_player_stop_white.gif in Resources */ = {isa = PBXBuildFile; fileRef = 64A631E61ED47FCF00FE6CB4 /* my_player_stop_white.gif */; };
+		64A632161ED480EB00FE6CB4 /* MineRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A632151ED480EB00FE6CB4 /* MineRootViewController.swift */; };
+		64A6321A1ED4860F00FE6CB4 /* CycleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A632181ED4860F00FE6CB4 /* CycleCollectionViewCell.swift */; };
+		64A6321B1ED4860F00FE6CB4 /* CycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A632191ED4860F00FE6CB4 /* CycleScrollView.swift */; };
 		7C7FD69704BD8EA7B11C3020 /* Pods_MumaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C022CDBD2220F09213C41D61 /* Pods_MumaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,7 +149,7 @@
 		642FBEC41CC0CD2000F32C27 /* UserAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
 		642FBEC81CC0CE1100F32C27 /* NSFileManager+Muma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+Muma.swift"; sourceTree = "<group>"; };
 		642FBECE1CC0EB4D00F32C27 /* WorkshopRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkshopRootViewController.swift; sourceTree = "<group>"; };
-		642FBED01CC0EB7900F32C27 /* CraftsmenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraftsmenViewController.swift; sourceTree = "<group>"; };
+		642FBED01CC0EB7900F32C27 /* CraftsmenRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraftsmenRootViewController.swift; sourceTree = "<group>"; };
 		642FBED21CC0EB9100F32C27 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		642FBED91CC0F23100F32C27 /* UserInfoTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTextCell.swift; sourceTree = "<group>"; };
 		642FBEDB1CC0F40400F32C27 /* UserInfoIconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoIconCell.swift; sourceTree = "<group>"; };
@@ -194,11 +206,23 @@
 		64A631C71ED46DF300FE6CB4 /* SearchMusicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMusicCell.swift; sourceTree = "<group>"; };
 		64A631C81ED46DF300FE6CB4 /* SearchPictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPictureCell.swift; sourceTree = "<group>"; };
 		64A631C91ED46DF300FE6CB4 /* SearchReadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchReadCell.swift; sourceTree = "<group>"; };
-		64A631D01ED4711100FE6CB4 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		64A631D11ED4711100FE6CB4 /* Movie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
-		64A631D21ED4711100FE6CB4 /* Music.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Music.storyboard; sourceTree = "<group>"; };
-		64A631D31ED4711100FE6CB4 /* Read.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Read.storyboard; sourceTree = "<group>"; };
+		64A631D01ED4711100FE6CB4 /* Workshop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Workshop.storyboard; sourceTree = "<group>"; };
+		64A631D11ED4711100FE6CB4 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		64A631D21ED4711100FE6CB4 /* Community.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
+		64A631D31ED4711100FE6CB4 /* Craftsmen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Craftsmen.storyboard; sourceTree = "<group>"; };
 		64A631D91ED4714300FE6CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		64A631DD1ED47FCF00FE6CB4 /* Bradley Hand Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bradley Hand Bold.ttf"; sourceTree = "<group>"; };
+		64A631DF1ED47FCF00FE6CB4 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
+		64A631E01ED47FCF00FE6CB4 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		64A631E11ED47FCF00FE6CB4 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
+		64A631E21ED47FCF00FE6CB4 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
+		64A631E31ED47FCF00FE6CB4 /* my_player_action.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = my_player_action.gif; sourceTree = "<group>"; };
+		64A631E41ED47FCF00FE6CB4 /* my_player_action_white.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = my_player_action_white.gif; sourceTree = "<group>"; };
+		64A631E51ED47FCF00FE6CB4 /* my_player_stop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = my_player_stop.gif; sourceTree = "<group>"; };
+		64A631E61ED47FCF00FE6CB4 /* my_player_stop_white.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = my_player_stop_white.gif; sourceTree = "<group>"; };
+		64A632151ED480EB00FE6CB4 /* MineRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineRootViewController.swift; sourceTree = "<group>"; };
+		64A632181ED4860F00FE6CB4 /* CycleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleCollectionViewCell.swift; sourceTree = "<group>"; };
+		64A632191ED4860F00FE6CB4 /* CycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleScrollView.swift; sourceTree = "<group>"; };
 		688C2A28D2119F8B37FD6E72 /* Pods_MumaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MumaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		881B9ABEC61BA9B2C98FC95C /* Pods-Muma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muma.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muma/Pods-Muma.release.xcconfig"; sourceTree = "<group>"; };
 		959D37461C06DEDB1D22A8F0 /* Pods-MumaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MumaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MumaTests/Pods-MumaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -328,7 +352,7 @@
 		642FBECC1CC0E91600F32C27 /* Craftsmen */ = {
 			isa = PBXGroup;
 			children = (
-				642FBED01CC0EB7900F32C27 /* CraftsmenViewController.swift */,
+				642FBED01CC0EB7900F32C27 /* CraftsmenRootViewController.swift */,
 			);
 			path = Craftsmen;
 			sourceTree = "<group>";
@@ -336,6 +360,7 @@
 		642FBECD1CC0E91600F32C27 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				64A632151ED480EB00FE6CB4 /* MineRootViewController.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -345,6 +370,7 @@
 			children = (
 				642FBEE61CC1C46100F32C27 /* Common */,
 				642FBED81CC0F20600F32C27 /* Cell */,
+				64A632171ED4860F00FE6CB4 /* ScrollView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,6 +453,7 @@
 				648F3FAB1CBB2646005B377F /* Assets.xcassets */,
 				648F3FDF1CBDF459005B377F /* Show.xcassets */,
 				642FBEED1CC202A500F32C27 /* TempImage.xcassets */,
+				64A631DB1ED47FCF00FE6CB4 /* Resources */,
 				648F3FAD1CBB2646005B377F /* LaunchScreen.storyboard */,
 				648F3FB01CBB2646005B377F /* Info.plist */,
 			);
@@ -581,12 +608,53 @@
 		64A631CF1ED4711100FE6CB4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				64A631D01ED4711100FE6CB4 /* Home.storyboard */,
-				64A631D11ED4711100FE6CB4 /* Movie.storyboard */,
-				64A631D21ED4711100FE6CB4 /* Music.storyboard */,
-				64A631D31ED4711100FE6CB4 /* Read.storyboard */,
+				64A631D01ED4711100FE6CB4 /* Workshop.storyboard */,
+				64A631D31ED4711100FE6CB4 /* Craftsmen.storyboard */,
+				64A631D21ED4711100FE6CB4 /* Community.storyboard */,
+				64A631D11ED4711100FE6CB4 /* Mine.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		64A631DB1ED47FCF00FE6CB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64A631DC1ED47FCF00FE6CB4 /* Fonts */,
+				64A631DE1ED47FCF00FE6CB4 /* GIFs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		64A631DC1ED47FCF00FE6CB4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				64A631DD1ED47FCF00FE6CB4 /* Bradley Hand Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		64A631DE1ED47FCF00FE6CB4 /* GIFs */ = {
+			isa = PBXGroup;
+			children = (
+				64A631DF1ED47FCF00FE6CB4 /* 1.gif */,
+				64A631E01ED47FCF00FE6CB4 /* 2.gif */,
+				64A631E11ED47FCF00FE6CB4 /* 3.gif */,
+				64A631E21ED47FCF00FE6CB4 /* 4.gif */,
+				64A631E31ED47FCF00FE6CB4 /* my_player_action.gif */,
+				64A631E41ED47FCF00FE6CB4 /* my_player_action_white.gif */,
+				64A631E51ED47FCF00FE6CB4 /* my_player_stop.gif */,
+				64A631E61ED47FCF00FE6CB4 /* my_player_stop_white.gif */,
+			);
+			path = GIFs;
+			sourceTree = "<group>";
+		};
+		64A632171ED4860F00FE6CB4 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				64A632191ED4860F00FE6CB4 /* CycleScrollView.swift */,
+				64A632181ED4860F00FE6CB4 /* CycleCollectionViewCell.swift */,
+			);
+			path = ScrollView;
 			sourceTree = "<group>";
 		};
 		7D4CC85473B0F303B3B24302 /* Frameworks */ = {
@@ -789,15 +857,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A631FD1ED47FCF00FE6CB4 /* 1.gif in Resources */,
 				648F3FAF1CBB2646005B377F /* LaunchScreen.storyboard in Resources */,
-				64A631D51ED4711100FE6CB4 /* Movie.storyboard in Resources */,
-				64A631D71ED4711100FE6CB4 /* Read.storyboard in Resources */,
-				64A631D61ED4711100FE6CB4 /* Music.storyboard in Resources */,
-				64A631D41ED4711100FE6CB4 /* Home.storyboard in Resources */,
+				64A632011ED47FCF00FE6CB4 /* my_player_action.gif in Resources */,
+				64A631D51ED4711100FE6CB4 /* Mine.storyboard in Resources */,
+				64A631FE1ED47FCF00FE6CB4 /* 2.gif in Resources */,
+				64A631D71ED4711100FE6CB4 /* Craftsmen.storyboard in Resources */,
+				64A631D61ED4711100FE6CB4 /* Community.storyboard in Resources */,
+				64A631D41ED4711100FE6CB4 /* Workshop.storyboard in Resources */,
+				64A631FF1ED47FCF00FE6CB4 /* 3.gif in Resources */,
+				64A632031ED47FCF00FE6CB4 /* my_player_stop.gif in Resources */,
 				648F3FAC1CBB2646005B377F /* Assets.xcassets in Resources */,
+				64A631FC1ED47FCF00FE6CB4 /* Bradley Hand Bold.ttf in Resources */,
 				64A631DA1ED4714300FE6CB4 /* Main.storyboard in Resources */,
 				648F3FE91CBDF459005B377F /* Show.xcassets in Resources */,
+				64A632021ED47FCF00FE6CB4 /* my_player_action_white.gif in Resources */,
+				64A632041ED47FCF00FE6CB4 /* my_player_stop_white.gif in Resources */,
 				642FBEEE1CC202A500F32C27 /* TempImage.xcassets in Resources */,
+				64A632001ED47FCF00FE6CB4 /* 4.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,8 +1068,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				642FBEC91CC0CE1100F32C27 /* NSFileManager+Muma.swift in Sources */,
+				64A6321A1ED4860F00FE6CB4 /* CycleCollectionViewCell.swift in Sources */,
 				642FBEBE1CC0C1BD00F32C27 /* MumaHUD.swift in Sources */,
 				642FBEDC1CC0F40400F32C27 /* UserInfoIconCell.swift in Sources */,
+				64A632161ED480EB00FE6CB4 /* MineRootViewController.swift in Sources */,
 				648F3FE31CBDF459005B377F /* ShowStepGeniusViewController.swift in Sources */,
 				64A631BC1ED45F1700FE6CB4 /* BaseViewController.swift in Sources */,
 				64A631BE1ED45F7D00FE6CB4 /* SegueViewController.swift in Sources */,
@@ -1003,7 +1082,7 @@
 				64A631CA1ED46DF300FE6CB4 /* SearchAuthorCell.swift in Sources */,
 				642FBEB81CBE4CAF00F32C27 /* MumaNavigationController.swift in Sources */,
 				648F3FE61CBDF459005B377F /* ShowStepViewController.swift in Sources */,
-				642FBED11CC0EB7900F32C27 /* CraftsmenViewController.swift in Sources */,
+				642FBED11CC0EB7900F32C27 /* CraftsmenRootViewController.swift in Sources */,
 				64A631CD1ED46DF300FE6CB4 /* SearchPictureCell.swift in Sources */,
 				642FBEEC1CC1E35700F32C27 /* PlainAvatar.swift in Sources */,
 				642FBEE51CC1C45100F32C27 /* UserHeaderView.swift in Sources */,
@@ -1016,6 +1095,7 @@
 				642FBED31CC0EB9100F32C27 /* CommunityViewController.swift in Sources */,
 				642FBEC51CC0CD2000F32C27 /* UserAvatar.swift in Sources */,
 				642FBEC01CC0C26C00F32C27 /* MumaConfig.swift in Sources */,
+				64A6321B1ED4860F00FE6CB4 /* CycleScrollView.swift in Sources */,
 				64A631CE1ED46DF300FE6CB4 /* SearchReadCell.swift in Sources */,
 				648F3FE41CBDF459005B377F /* ShowStepMatchViewController.swift in Sources */,
 				642FBEE01CC0F74700F32C27 /* UIScrollView+APParallaxHeader.m in Sources */,
