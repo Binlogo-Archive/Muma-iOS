@@ -56,22 +56,22 @@ class UserHeaderView: UIView {
         addSubview(nameLabel)
         addSubview(locationLabel)
 
-        bgImageView.snp_makeConstraints { (make) in
+        bgImageView.snp.makeConstraints { (make) in
             make.top.left.bottom.right.equalTo(0)
         }
         
-        locationLabel.snp_makeConstraints { (make) in
+        locationLabel.snp.makeConstraints { (make) in
             make.bottom.equalTo(self).offset(-15)
             make.centerX.equalTo(self)
         }
         
-        nameLabel.snp_makeConstraints { (make) in
-            make.bottom.equalTo(locationLabel.snp_top).offset(-15)
+        nameLabel.snp.makeConstraints { (make) in
+            make.bottom.equalTo(locationLabel.snp.top).offset(-15)
             make.centerX.equalTo(self)
         }
 
-        avatarButton.snp_makeConstraints { (make) in
-            make.bottom.equalTo(nameLabel.snp_top).offset(-15);
+        avatarButton.snp.makeConstraints { (make) in
+            make.bottom.equalTo(nameLabel.snp.top).offset(-15);
             make.centerX.equalTo(self);
         }
     }
