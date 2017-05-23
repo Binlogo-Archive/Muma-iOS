@@ -20,11 +20,11 @@ class ShowStepGeniusViewController: ShowStepViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        repeatAnimate(topRedDot, alongWithPath: UIBezierPath(ovalInRect: CGRectInset(topRedDot.frame, 1, 1)), duration: 2)
-        repeatAnimate(rightBlueDot, alongWithPath: UIBezierPath(ovalInRect: CGRectInset(rightBlueDot.frame, 1, 1)), duration: 3)
-        repeatAnimate(rightGreenDot, alongWithPath: UIBezierPath(ovalInRect: CGRectInset(rightGreenDot.frame, 1, 1)), duration: 3)
+        repeatAnimate(topRedDot, alongWithPath: UIBezierPath(ovalIn: topRedDot.frame.insetBy(dx: 1, dy: 1)), duration: 2)
+        repeatAnimate(rightBlueDot, alongWithPath: UIBezierPath(ovalIn: rightBlueDot.frame.insetBy(dx: 1, dy: 1)), duration: 3)
+        repeatAnimate(rightGreenDot, alongWithPath: UIBezierPath(ovalIn: rightGreenDot.frame.insetBy(dx: 1, dy: 1)), duration: 3)
     }
 }

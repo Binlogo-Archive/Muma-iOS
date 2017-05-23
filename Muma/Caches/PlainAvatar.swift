@@ -9,8 +9,9 @@
 import UIKit
 import Navi
 import RealmSwift
+import MumaKit
 
-private let screenScale = UIScreen.mainScreen().scale
+private let screenScale = UIScreen.main.scale
 
 struct PlainAvatar {
     
@@ -20,8 +21,8 @@ struct PlainAvatar {
 
 extension PlainAvatar: Navi.Avatar {
     
-    var URL: NSURL? {
-        return NSURL(string: avatarURLString)
+    var url: Foundation.URL? {
+        return Foundation.URL(string: avatarURLString)
     }
     
     var style: AvatarStyle {
@@ -48,13 +49,10 @@ extension PlainAvatar: Navi.Avatar {
     
     var localOriginalImage: UIImage? {
         
-        if let
-            realm = try? Realm(),
-            avatar = avatarWithAvatarURLString(avatarURLString, inRealm: realm),
-            avatarFileURL = NSFileManager.mumaAvatarURLWithName(avatar.avatarFileName),
-            avatarFilePath = avatarFileURL.path,
-            image = UIImage(contentsOfFile: avatarFilePath) {
-            return image
+        if let realm = try? Realm(),
+            let avatar = avatarWithAvatarURLString(avatarURLString, inRealm: realm),
+            let avatarFileURL = FileManager.mumaAvatarURLWithName(avatar.avatarFileName) {
+            return UIImage(contentsOfFile: avatarFileURL.path)
         }
         
         return nil
@@ -65,16 +63,14 @@ extension PlainAvatar: Navi.Avatar {
         switch style {
             
         case miniAvatarStyle:
-            if let
-                realm = try? Realm(),
-                avatar = avatarWithAvatarURLString(avatarURLString, inRealm: realm) {
+            if let realm = try? Realm(),
+                let avatar = avatarWithAvatarURLString(avatarURLString, inRealm: realm) {
                 return UIImage(data: avatar.roundMini, scale: screenScale)
             }
             
         case nanoAvatarStyle:
-            if let
-                realm = try? Realm(),
-                avatar = avatarWithAvatarURLString(avatarURLString, inRealm: realm) {
+            if let realm = try? Realm(),
+                let avatar = avatarWithAvatarURLString(avatarURLString, inRealm: realm) {
                 return UIImage(data: avatar.roundNano, scale: screenScale)
             }
             
@@ -85,7 +81,7 @@ extension PlainAvatar: Navi.Avatar {
         return nil
     }
     
-    func saveOriginalImage(originalImage: UIImage, styledImage: UIImage) {
+    func save(originalImage: UIImage, styledImage: UIImage) {
         
         guard let realm = try? Realm() else {
             return
@@ -109,9 +105,9 @@ extension PlainAvatar: Navi.Avatar {
             return
         }
         
-        let avatarFileName = NSUUID().UUIDString
+        let avatarFileName = UUID().uuidString
         
-        if avatar.avatarFileName.isEmpty, let _ = NSFileManager.saveAvatarImage(originalImage, withName: avatarFileName) {
+        if avatar.avatarFileName.isEmpty, let _ = FileManager.saveAvatarImage(originalImage, withName: avatarFileName) {
             
             let _ = try? realm.write {
                 avatar.avatarFileName = avatarFileName
@@ -120,19 +116,19 @@ extension PlainAvatar: Navi.Avatar {
         
         switch style {
             
-        case .RoundedRectangle(let size, _, _):
+        case .roundedRectangle(let size, _, _):
             
             switch size.width {
                 
             case 60:
-                if avatar.roundMini.length == 0, let data = UIImagePNGRepresentation(styledImage) {
+                if avatar.roundMini.count == 0, let data = UIImagePNGRepresentation(styledImage) {
                     let _ = try? realm.write {
                         avatar.roundMini = data
                     }
                 }
                 
             case 40:
-                if avatar.roundNano.length == 0, let data = UIImagePNGRepresentation(styledImage) {
+                if avatar.roundNano.count == 0, let data = UIImagePNGRepresentation(styledImage) {
                     let _ = try? realm.write {
                         avatar.roundNano = data
                     }

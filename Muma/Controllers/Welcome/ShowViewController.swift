@@ -19,9 +19,9 @@ class ShowViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    private var isFirstAppear = true
+    fileprivate var isFirstAppear = true
     
-    private var steps = [UIViewController]()
+    fileprivate var steps = [UIViewController]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ShowViewController: UIViewController {
         initUI()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -42,11 +42,11 @@ class ShowViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if isFirstAppear {
-            UIView.animateWithDuration(1, delay: 0.5, options: .CurveEaseInOut, animations: { [weak self] in
+            UIView.animate(withDuration: 1, delay: 0.5, options: UIViewAnimationOptions(), animations: { [weak self] in
                 self?.scrollView.alpha = 1
                 self?.pageControl.alpha = 1
                 self?.registerButton.alpha = 1
@@ -59,7 +59,7 @@ class ShowViewController: UIViewController {
     
     // MARK: Private
     
-    private func initUI() {
+    fileprivate func initUI() {
         
         let stepA = stepGenius()
         let stepB = stepMatch()
@@ -78,13 +78,13 @@ class ShowViewController: UIViewController {
             "stepC": stepC.view,
         ]
         
-        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[stepA(==view)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDictionary)
+        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[stepA(==view)]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDictionary)
         
-        NSLayoutConstraint.activateConstraints(vConstraints)
+        NSLayoutConstraint.activate(vConstraints)
         
-        let hConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[stepA(==view)][stepB(==view)][stepC(==view)]|", options: [.AlignAllBottom, .AlignAllTop], metrics: nil, views: viewsDictionary)
+        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[stepA(==view)][stepB(==view)][stepC(==view)]|", options: [.alignAllBottom, .alignAllTop], metrics: nil, views: viewsDictionary)
         
-        NSLayoutConstraint.activateConstraints(hConstraints)
+        NSLayoutConstraint.activate(hConstraints)
         
 //        stepA.view.snp_updateConstraints { (make) -> Void in
 //            make.leading.equalTo(view)
@@ -101,38 +101,38 @@ class ShowViewController: UIViewController {
         
     }
     
-    private func stepGenius() -> ShowStepGeniusViewController {
-        let step = storyboard!.instantiateViewControllerWithIdentifier("ShowStepGeniusViewController") as! ShowStepGeniusViewController
+    fileprivate func stepGenius() -> ShowStepGeniusViewController {
+        let step = storyboard!.instantiateViewController(withIdentifier: "ShowStepGeniusViewController") as! ShowStepGeniusViewController
 
         step.view.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(step.view)
 
         addChildViewController(step)
-        step.didMoveToParentViewController(self)
+        step.didMove(toParentViewController: self)
         
         return step
     }
     
-    private func stepMatch() -> ShowStepMatchViewController {
-        let step = storyboard!.instantiateViewControllerWithIdentifier("ShowStepMatchViewController") as! ShowStepMatchViewController
+    fileprivate func stepMatch() -> ShowStepMatchViewController {
+        let step = storyboard!.instantiateViewController(withIdentifier: "ShowStepMatchViewController") as! ShowStepMatchViewController
         
         step.view.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(step.view)
         
         addChildViewController(step)
-        step.didMoveToParentViewController(self)
+        step.didMove(toParentViewController: self)
         
         return step
     }
     
-    private func stepMeet() -> ShowStepMeetViewController {
-        let step = storyboard!.instantiateViewControllerWithIdentifier("ShowStepMeetViewController") as! ShowStepMeetViewController
+    fileprivate func stepMeet() -> ShowStepMeetViewController {
+        let step = storyboard!.instantiateViewController(withIdentifier: "ShowStepMeetViewController") as! ShowStepMeetViewController
         
         step.view.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(step.view)
         
         addChildViewController(step)
-        step.didMoveToParentViewController(self)
+        step.didMove(toParentViewController: self)
         
         return step
     }
@@ -142,9 +142,9 @@ class ShowViewController: UIViewController {
 
 extension ShowViewController: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
-        let pageWidth = CGRectGetWidth(scrollView.bounds)
+        let pageWidth = scrollView.bounds.width
         let pageFraction = scrollView.contentOffset.x / pageWidth
         
         let page = Int(round(pageFraction))
