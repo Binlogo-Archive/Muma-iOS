@@ -11,7 +11,7 @@ import UIKit
 class MumaUtilKit {
     
     class func getScreenRect() -> CGRect {
-        return UIScreen.mainScreen().bounds
+        return UIScreen.main.bounds
     }
     
     

@@ -14,7 +14,7 @@ let miniAvatarStyle: AvatarStyle = .RoundedRectangle(size: CGSize(width: 60, hei
 let nanoAvatarStyle: AvatarStyle = .RoundedRectangle(size: CGSize(width: 40, height: 40), cornerRadius: 20, borderWidth: 0)
 let picoAvatarStyle: AvatarStyle = .RoundedRectangle(size: CGSize(width: 30, height: 30), cornerRadius: 15, borderWidth: 0)
 
-private let screenScale = UIScreen.mainScreen().scale
+private let screenScale = UIScreen.main.scale
 
 struct UserAvatar {
     
@@ -34,8 +34,8 @@ struct UserAvatar {
 
 extension UserAvatar: Navi.Avatar {
     
-    var URL: NSURL? {
-        return NSURL(string: avatarURLString)
+    var URL: Foundation.URL? {
+        return Foundation.URL(string: avatarURLString)
     }
     
     var style: AvatarStyle {
@@ -62,7 +62,7 @@ extension UserAvatar: Navi.Avatar {
         if let user = user, avatar = user.avatar where avatar.avatarURLString == user.avatarURLString {
             
             if let
-                avatarFileURL = NSFileManager.mumaAvatarURLWithName(avatar.avatarFileName),
+                avatarFileURL = FileManager.mumaAvatarURLWithName(avatar.avatarFileName),
                 avatarFilePath = avatarFileURL.path,
                 image = UIImage(contentsOfFile: avatarFilePath) {
                 return image
@@ -93,7 +93,7 @@ extension UserAvatar: Navi.Avatar {
         return nil
     }
     
-    func saveOriginalImage(originalImage: UIImage, styledImage: UIImage) {
+    func saveOriginalImage(_ originalImage: UIImage, styledImage: UIImage) {
         
         guard let user = user, realm = user.realm else {
             return
@@ -107,7 +107,7 @@ extension UserAvatar: Navi.Avatar {
         
         if let oldAvatar = user.avatar where oldAvatar.avatarURLString != user.avatarURLString {
             
-            NSFileManager.deleteAvatarImageWithName(oldAvatar.avatarFileName)
+            FileManager.deleteAvatarImageWithName(oldAvatar.avatarFileName)
             
             let _ = try? realm.write {
                 realm.delete(oldAvatar)
@@ -138,9 +138,9 @@ extension UserAvatar: Navi.Avatar {
         
         if let avatar = user.avatar {
             
-            let avatarFileName = NSUUID().UUIDString
+            let avatarFileName = UUID().uuidString
             
-            if avatar.avatarFileName.isEmpty, let _ = NSFileManager.saveAvatarImage(originalImage, withName: avatarFileName) {
+            if avatar.avatarFileName.isEmpty, let _ = FileManager.saveAvatarImage(originalImage, withName: avatarFileName) {
                 
                 let _ = try? realm.write {
                     avatar.avatarFileName = avatarFileName
@@ -154,14 +154,14 @@ extension UserAvatar: Navi.Avatar {
                 switch size.width {
                     
                 case 60:
-                    if avatar.roundMini.length == 0, let data = UIImagePNGRepresentation(styledImage) {
+                    if avatar.roundMini.count == 0, let data = UIImagePNGRepresentation(styledImage) {
                         let _ = try? realm.write {
                             avatar.roundMini = data
                         }
                     }
                     
                 case 40:
-                    if avatar.roundNano.length == 0, let data = UIImagePNGRepresentation(styledImage) {
+                    if avatar.roundNano.count == 0, let data = UIImagePNGRepresentation(styledImage) {
                         let _ = try? realm.write {
                             avatar.roundNano = data
                         }

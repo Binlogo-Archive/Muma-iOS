@@ -25,22 +25,22 @@ enum FileExtension: String {
     }
 }
 
-extension NSFileManager {
+extension FileManager {
     
-    class func mumaCachesURL() -> NSURL {
-        return try! NSFileManager.defaultManager().URLForDirectory(.CachesDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false)
+    class func mumaCachesURL() -> URL {
+        return try! FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
     }
     
     // MARK: Avatar
     
-    class func mumaAvatarCachesURL() -> NSURL? {
+    class func mumaAvatarCachesURL() -> URL? {
         
-        let fileManager = NSFileManager.defaultManager()
+        let fileManager = FileManager.default
         
-        let avatarCachesURL = mumaCachesURL().URLByAppendingPathComponent("avatar_caches", isDirectory: true)
+        let avatarCachesURL = mumaCachesURL().appendingPathComponent("avatar_caches", isDirectory: true)
         
         do {
-            try fileManager.createDirectoryAtURL(avatarCachesURL, withIntermediateDirectories: true, attributes: nil)
+            try fileManager.createDirectory(at: avatarCachesURL!, withIntermediateDirectories: true, attributes: nil)
             return avatarCachesURL
         } catch _ {
         }
@@ -48,20 +48,20 @@ extension NSFileManager {
         return nil
     }
     
-    class func mumaAvatarURLWithName(name: String) -> NSURL? {
+    class func mumaAvatarURLWithName(_ name: String) -> URL? {
         
         if let avatarCachesURL = mumaAvatarCachesURL() {
-            return avatarCachesURL.URLByAppendingPathComponent("\(name).\(FileExtension.JPEG.rawValue)")
+            return avatarCachesURL.appendingPathComponent("\(name).\(FileExtension.JPEG.rawValue)")
         }
         
         return nil
     }
     
-    class func saveAvatarImage(avatarImage: UIImage, withName name: String) -> NSURL? {
+    class func saveAvatarImage(_ avatarImage: UIImage, withName name: String) -> URL? {
         
         if let avatarURL = mumaAvatarURLWithName(name) {
             let imageData = UIImageJPEGRepresentation(avatarImage, 0.8)
-            if NSFileManager.defaultManager().createFileAtPath(avatarURL.path!, contents: imageData, attributes: nil) {
+            if FileManager.default.createFile(atPath: avatarURL.path!, contents: imageData, attributes: nil) {
                 return avatarURL
             }
         }
@@ -69,10 +69,10 @@ extension NSFileManager {
         return nil
     }
     
-    class func deleteAvatarImageWithName(name: String) {
+    class func deleteAvatarImageWithName(_ name: String) {
         if let avatarURL = mumaAvatarURLWithName(name) {
             do {
-                try NSFileManager.defaultManager().removeItemAtURL(avatarURL)
+                try FileManager.default.removeItem(at: avatarURL)
             } catch _ {
             }
         }
@@ -80,14 +80,14 @@ extension NSFileManager {
     
     // MARK: Message
     
-    class func mumaMessageCachesURL() -> NSURL? {
+    class func mumaMessageCachesURL() -> URL? {
         
-        let fileManager = NSFileManager.defaultManager()
+        let fileManager = FileManager.default
         
-        let messageCachesURL = mumaCachesURL().URLByAppendingPathComponent("message_caches", isDirectory: true)
+        let messageCachesURL = mumaCachesURL().appendingPathComponent("message_caches", isDirectory: true)
         
         do {
-            try fileManager.createDirectoryAtURL(messageCachesURL, withIntermediateDirectories: true, attributes: nil)
+            try fileManager.createDirectory(at: messageCachesURL!, withIntermediateDirectories: true, attributes: nil)
             return messageCachesURL
         } catch _ {
         }
@@ -97,19 +97,19 @@ extension NSFileManager {
     
     // Image
     
-    class func mumaMessageImageURLWithName(name: String) -> NSURL? {
+    class func mumaMessageImageURLWithName(_ name: String) -> URL? {
         
         if let messageCachesURL = mumaMessageCachesURL() {
-            return messageCachesURL.URLByAppendingPathComponent("\(name).\(FileExtension.JPEG.rawValue)")
+            return messageCachesURL.appendingPathComponent("\(name).\(FileExtension.JPEG.rawValue)")
         }
         
         return nil
     }
     
-    class func saveMessageImageData(messageImageData: NSData, withName name: String) -> NSURL? {
+    class func saveMessageImageData(_ messageImageData: Data, withName name: String) -> URL? {
         
         if let messageImageURL = mumaMessageImageURLWithName(name) {
-            if NSFileManager.defaultManager().createFileAtPath(messageImageURL.path!, contents: messageImageData, attributes: nil) {
+            if FileManager.default.createFile(atPath: messageImageURL.path!, contents: messageImageData, attributes: nil) {
                 return messageImageURL
             }
         }
@@ -117,7 +117,7 @@ extension NSFileManager {
         return nil
     }
     
-    class func removeMessageImageFileWithName(name: String) {
+    class func removeMessageImageFileWithName(_ name: String) {
         
         if name.isEmpty {
             return
@@ -125,7 +125,7 @@ extension NSFileManager {
         
         if let messageImageURL = mumaMessageImageURLWithName(name) {
             do {
-                try NSFileManager.defaultManager().removeItemAtURL(messageImageURL)
+                try FileManager.default.removeItem(at: messageImageURL)
             } catch _ {
             }
         }
@@ -133,19 +133,19 @@ extension NSFileManager {
     
     // Audio
     
-    class func mumaMessageAudioURLWithName(name: String) -> NSURL? {
+    class func mumaMessageAudioURLWithName(_ name: String) -> URL? {
         
         if let messageCachesURL = mumaMessageCachesURL() {
-            return messageCachesURL.URLByAppendingPathComponent("\(name).\(FileExtension.M4A.rawValue)")
+            return messageCachesURL.appendingPathComponent("\(name).\(FileExtension.M4A.rawValue)")
         }
         
         return nil
     }
     
-    class func saveMessageAudioData(messageAudioData: NSData, withName name: String) -> NSURL? {
+    class func saveMessageAudioData(_ messageAudioData: Data, withName name: String) -> URL? {
         
         if let messageAudioURL = mumaMessageAudioURLWithName(name) {
-            if NSFileManager.defaultManager().createFileAtPath(messageAudioURL.path!, contents: messageAudioData, attributes: nil) {
+            if FileManager.default.createFile(atPath: messageAudioURL.path!, contents: messageAudioData, attributes: nil) {
                 return messageAudioURL
             }
         }
@@ -153,7 +153,7 @@ extension NSFileManager {
         return nil
     }
     
-    class func removeMessageAudioFileWithName(name: String) {
+    class func removeMessageAudioFileWithName(_ name: String) {
         
         if name.isEmpty {
             return
@@ -161,7 +161,7 @@ extension NSFileManager {
         
         if let messageAudioURL = mumaMessageAudioURLWithName(name) {
             do {
-                try NSFileManager.defaultManager().removeItemAtURL(messageAudioURL)
+                try FileManager.default.removeItem(at: messageAudioURL)
             } catch _ {
             }
         }
@@ -169,19 +169,19 @@ extension NSFileManager {
     
     // Video
     
-    class func mumaMessageVideoURLWithName(name: String) -> NSURL? {
+    class func mumaMessageVideoURLWithName(_ name: String) -> URL? {
         
         if let messageCachesURL = mumaMessageCachesURL() {
-            return messageCachesURL.URLByAppendingPathComponent("\(name).\(FileExtension.MP4.rawValue)")
+            return messageCachesURL.appendingPathComponent("\(name).\(FileExtension.MP4.rawValue)")
         }
         
         return nil
     }
     
-    class func saveMessageVideoData(messageVideoData: NSData, withName name: String) -> NSURL? {
+    class func saveMessageVideoData(_ messageVideoData: Data, withName name: String) -> URL? {
         
         if let messageVideoURL = mumaMessageVideoURLWithName(name) {
-            if NSFileManager.defaultManager().createFileAtPath(messageVideoURL.path!, contents: messageVideoData, attributes: nil) {
+            if FileManager.default.createFile(atPath: messageVideoURL.path!, contents: messageVideoData, attributes: nil) {
                 return messageVideoURL
             }
         }
@@ -189,12 +189,12 @@ extension NSFileManager {
         return nil
     }
     
-    class func removeMessageVideoFilesWithName(name: String, thumbnailName: String) {
+    class func removeMessageVideoFilesWithName(_ name: String, thumbnailName: String) {
         
         if !name.isEmpty {
             if let messageVideoURL = mumaMessageVideoURLWithName(name) {
                 do {
-                    try NSFileManager.defaultManager().removeItemAtURL(messageVideoURL)
+                    try FileManager.default.removeItem(at: messageVideoURL)
                 } catch _ {
                 }
             }
@@ -203,7 +203,7 @@ extension NSFileManager {
         if !thumbnailName.isEmpty {
             if let messageImageURL = mumaMessageImageURLWithName(thumbnailName) {
                 do {
-                    try NSFileManager.defaultManager().removeItemAtURL(messageImageURL)
+                    try FileManager.default.removeItem(at: messageImageURL)
                 } catch _ {
                 }
             }
@@ -212,13 +212,13 @@ extension NSFileManager {
     
     // MARK: Clean Caches
     
-    class func cleanCachesDirectoryAtURL(cachesDirectoryURL: NSURL) {
-        let fileManager = NSFileManager.defaultManager()
+    class func cleanCachesDirectoryAtURL(_ cachesDirectoryURL: URL) {
+        let fileManager = FileManager.default
         
-        if let fileURLs = (try? fileManager.contentsOfDirectoryAtURL(cachesDirectoryURL, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions())) {
+        if let fileURLs = (try? fileManager.contentsOfDirectory(at: cachesDirectoryURL, includingPropertiesForKeys: nil, options: FileManager.DirectoryEnumerationOptions())) {
             for fileURL in fileURLs {
                 do {
-                    try fileManager.removeItemAtURL(fileURL)
+                    try fileManager.removeItem(at: fileURL)
                 } catch _ {
                 }
             }

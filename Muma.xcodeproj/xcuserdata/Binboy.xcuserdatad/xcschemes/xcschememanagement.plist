@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MumaKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>23</integer>
+		</dict>
+		<key>MumaNetworking.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>648F3FBF1CBB2646005B377F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64A6316E1ED311F900FE6CB4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64A631861ED33B2000FE6CB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

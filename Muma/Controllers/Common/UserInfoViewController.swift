@@ -12,11 +12,11 @@ class UserInfoViewController: UIViewController {
     
     @IBOutlet weak var myTableView: UITableView! {
         didSet {
-            myTableView.backgroundColor = UIColor.lightGrayColor()
-            myTableView.separatorStyle = .SingleLine
-            myTableView.registerClass(UserInfoIconCell.self, forCellReuseIdentifier: MumaConfig.CellIdentifier.userInfoIconCell)
+            myTableView.backgroundColor = UIColor.lightGray
+            myTableView.separatorStyle = .singleLine
+            myTableView.register(UserInfoIconCell.self, forCellReuseIdentifier: MumaConfig.CellIdentifier.userInfoIconCell)
             let headerView = UserHeaderView(frame: CGRect(x: 0, y: 0, width: MumaUtilKit.getScreenRect().width, height: MumaConfig.UserInfo.headerViewHeight))
-            myTableView.addParallaxWithView(headerView, andHeight: CGRectGetHeight(headerView.frame))
+            myTableView.addParallax(with: headerView, andHeight: headerView.frame.height)
             
             if !isMe {
 
@@ -26,10 +26,10 @@ class UserInfoViewController: UIViewController {
     }
     
     lazy var sayHiFooterView:UIView = {
-        let button = UIButton(type: .Custom)
-        button.setTitle("打招呼", forState: .Normal)
+        let button = UIButton(type: .custom)
+        button.setTitle("打招呼", for: UIControlState())
         button.frame = CGRect(x: 0, y: 0, width: MumaUtilKit.getScreenRect().width, height: 50)
-        button.backgroundColor = UIColor.blueColor()
+        button.backgroundColor = UIColor.blue
         button.clipsToBounds = true
         button.layer.cornerRadius = 5
         return button
@@ -61,33 +61,33 @@ class UserInfoViewController: UIViewController {
 extension UserInfoViewController: UITableViewDataSource {
     
     enum UserInfoSection: Int {
-        case About = 0
-        case Properties
+        case about = 0
+        case properties
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case UserInfoSection.About.rawValue:
+        case UserInfoSection.about.rawValue:
             return 1
-        case UserInfoSection.Properties.rawValue:
+        case UserInfoSection.properties.rawValue:
             return 2
         default:
             return 0
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
-        case UserInfoSection.About.rawValue:
-            let cell = tableView.dequeueReusableCellWithIdentifier(MumaConfig.CellIdentifier.userInfoTextCell) as? UserInfoTextCell
+        case UserInfoSection.about.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MumaConfig.CellIdentifier.userInfoTextCell) as? UserInfoTextCell
             cell?.valueLabel?.text = "这个家伙很懒，还没填写个人简介，这句话应该很长长喊刚行行偶家刚到家"
             return cell!
-        case UserInfoSection.Properties.rawValue:
-            let cell = tableView.dequeueReusableCellWithIdentifier(MumaConfig.CellIdentifier.userInfoIconCell)
+        case UserInfoSection.properties.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MumaConfig.CellIdentifier.userInfoIconCell)
             if indexPath.row == 0 {
                 cell?.textLabel?.text = isMe ? "我的工坊" : "他的工坊"
             } else if indexPath.row == 1 {
@@ -95,28 +95,28 @@ extension UserInfoViewController: UITableViewDataSource {
             }
             return cell!
         default:
-            let cell = tableView.dequeueReusableCellWithIdentifier(MumaConfig.CellIdentifier.userInfoIconCell)
+            let cell = tableView.dequeueReusableCell(withIdentifier: MumaConfig.CellIdentifier.userInfoIconCell)
             cell?.textLabel?.text = "IconCell"
             return cell!
         }
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
 //        if !isMe && section == numberOfSectionsInTableView(myTableView) - 1 {
 //            return 0.5
 //        }
         return 20.0
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.5
     }
 }
 
 extension UserInfoViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
     }
 }

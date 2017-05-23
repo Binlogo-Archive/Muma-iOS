@@ -1,13 +1,11 @@
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
-target 'Muma' do
-
+def pods
     pod 'Parse'
     pod 'Navi'
     pod 'Kanna'
-    pod 'Alamofire'
     pod 'DeviceGuru'
     pod 'KeyboardMan'
     pod 'Ruler'
@@ -21,7 +19,12 @@ target 'Muma' do
     pod 'Base64'
     pod 'MonkeyKing'
     pod 'Fabric'
+end
 
+target 'Muma' do
+    swift_version = '3.0'
+
+    pods
 end
 
 target 'MumaTests' do

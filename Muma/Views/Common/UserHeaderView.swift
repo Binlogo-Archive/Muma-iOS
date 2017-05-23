@@ -14,26 +14,26 @@ class UserHeaderView: UIView {
     lazy var bgImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Welcome")
-        imageView.contentMode = .ScaleAspectFill
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
     lazy var avatarButton: UIButton = {
-        let button = UIButton(type: .Custom)
-        button.setImage(UIImage(named: "placeholder_monkey_round_50"), forState: .Normal)
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "placeholder_monkey_round_50"), for: UIControlState())
         return button
     }()
     
     lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor.whiteColor()
+        label.textColor = UIColor.white
         label.text = "Binboy @Muma"
         return label;
     }()
     
     lazy var locationLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor.whiteColor()
+        label.textColor = UIColor.white
         label.text = "北京"
         return label;
     }()
@@ -49,7 +49,7 @@ class UserHeaderView: UIView {
     }
     
     // MARK: Private
-    private func makeUI() {
+    fileprivate func makeUI() {
         addSubview(bgImageView)
         addSubview(avatarButton)
         addSubview(nameLabel)

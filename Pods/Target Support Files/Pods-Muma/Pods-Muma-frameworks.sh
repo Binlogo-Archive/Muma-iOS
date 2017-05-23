@@ -16,7 +16,7 @@ install_framework()
     local source="$1"
   fi
 
-  local destination="${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+  local destination="${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
 
   if [ -L "${source}" ]; then
       echo "Symlinked..."
@@ -59,8 +59,13 @@ code_sign_if_enabled() {
   if [ -n "${EXPANDED_CODE_SIGN_IDENTITY}" -a "${CODE_SIGNING_REQUIRED}" != "NO" -a "${CODE_SIGNING_ALLOWED}" != "NO" ]; then
     # Use the current code_sign_identitiy
     echo "Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}"
-    echo "/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\""
-    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements "$1"
+    local code_sign_cmd="/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} ${OTHER_CODE_SIGN_FLAGS} --preserve-metadata=identifier,entitlements '$1'"
+
+    if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
+      code_sign_cmd="$code_sign_cmd &"
+    fi
+    echo "$code_sign_cmd"
+    eval "$code_sign_cmd"
   fi
 }
 
@@ -84,40 +89,41 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-Muma/Alamofire.framework"
-  install_framework "Pods-Muma/Base64.framework"
-  install_framework "Pods-Muma/Bolts.framework"
-  install_framework "Pods-Muma/DeviceGuru.framework"
-  install_framework "Pods-Muma/FXBlurView.framework"
-  install_framework "Pods-Muma/Kanna.framework"
-  install_framework "Pods-Muma/KeyboardMan.framework"
-  install_framework "Pods-Muma/Kingfisher.framework"
-  install_framework "Pods-Muma/MonkeyKing.framework"
-  install_framework "Pods-Muma/Navi.framework"
-  install_framework "Pods-Muma/Parse.framework"
-  install_framework "Pods-Muma/Proposer.framework"
-  install_framework "Pods-Muma/Ruler.framework"
-  install_framework "Pods-Muma/SnapKit.framework"
-  install_framework "Pods-Muma/SocketRocket.framework"
-  install_framework "Pods-Muma/TPKeyboardAvoiding.framework"
-  install_framework "Pods-Muma/pop.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Base64/Base64.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Bolts/Bolts.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DeviceGuru/DeviceGuru.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/FXBlurView/FXBlurView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Kanna/Kanna.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KeyboardMan/KeyboardMan.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/MonkeyKing/MonkeyKing.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Navi/Navi.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Parse/Parse.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Proposer/Proposer.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Ruler/Ruler.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SocketRocket/SocketRocket.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TPKeyboardAvoiding/TPKeyboardAvoiding.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/pop/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-Muma/Alamofire.framework"
-  install_framework "Pods-Muma/Base64.framework"
-  install_framework "Pods-Muma/Bolts.framework"
-  install_framework "Pods-Muma/DeviceGuru.framework"
-  install_framework "Pods-Muma/FXBlurView.framework"
-  install_framework "Pods-Muma/Kanna.framework"
-  install_framework "Pods-Muma/KeyboardMan.framework"
-  install_framework "Pods-Muma/Kingfisher.framework"
-  install_framework "Pods-Muma/MonkeyKing.framework"
-  install_framework "Pods-Muma/Navi.framework"
-  install_framework "Pods-Muma/Parse.framework"
-  install_framework "Pods-Muma/Proposer.framework"
-  install_framework "Pods-Muma/Ruler.framework"
-  install_framework "Pods-Muma/SnapKit.framework"
-  install_framework "Pods-Muma/SocketRocket.framework"
-  install_framework "Pods-Muma/TPKeyboardAvoiding.framework"
-  install_framework "Pods-Muma/pop.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Base64/Base64.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Bolts/Bolts.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DeviceGuru/DeviceGuru.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/FXBlurView/FXBlurView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Kanna/Kanna.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KeyboardMan/KeyboardMan.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/MonkeyKing/MonkeyKing.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Navi/Navi.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Parse/Parse.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Proposer/Proposer.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Ruler/Ruler.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SocketRocket/SocketRocket.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TPKeyboardAvoiding/TPKeyboardAvoiding.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/pop/pop.framework"
+fi
+if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
+  wait
 fi

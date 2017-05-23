@@ -8,7 +8,7 @@
 
 import UIKit
 
-func metaDataStringOfImage(image: UIImage, needBlurThumbnail: Bool) -> String? {
+func metaDataStringOfImage(_ image: UIImage, needBlurThumbnail: Bool) -> String? {
     
     let metaDataInfo: [String: AnyObject]
     
@@ -41,9 +41,9 @@ func metaDataStringOfImage(image: UIImage, needBlurThumbnail: Bool) -> String? {
             
             let data = UIImageJPEGRepresentation(thumbnail, 0.7)
             
-            let string = data!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+            let string = data!.base64EncodedStringWithOptions(NSData.Base64EncodingOptions(rawValue: 0))
             
-            print("image thumbnail string length: \(string.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))\n")
+            print("image thumbnail string length: \(string.lengthOfBytesUsingEncoding(String.Encoding.utf8))\n")
             
             metaDataInfo = [
                 MumaConfig.MetaData.imageWidth: imageWidth,
@@ -60,8 +60,8 @@ func metaDataStringOfImage(image: UIImage, needBlurThumbnail: Bool) -> String? {
     }
     
     var metaDataString: String? = nil
-    if let metaData = try? NSJSONSerialization.dataWithJSONObject(metaDataInfo, options: []) {
-        metaDataString = NSString(data: metaData, encoding: NSUTF8StringEncoding) as? String
+    if let metaData = try? JSONSerialization.data(withJSONObject: metaDataInfo, options: []) {
+        metaDataString = NSString(data: metaData, encoding: String.Encoding.utf8) as? String
     }
     
     return metaDataString

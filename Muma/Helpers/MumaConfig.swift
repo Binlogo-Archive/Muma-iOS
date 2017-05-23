@@ -15,7 +15,7 @@ class MumaConfig {
         static let userInfoIconCell = "UserInfoIconCell"
     }
     
-    static let forcedHideActivityIndicatorTimeInterval: NSTimeInterval = 30
+    static let forcedHideActivityIndicatorTimeInterval: TimeInterval = 30
     
     struct MetaData {
         static let audioDuration = "audio_duration"
@@ -37,12 +37,4 @@ class MumaConfig {
         static let headerViewHeight:CGFloat = 230
     }
     
-    class func clientType() -> Int {
-        // TODO: clientType
-        #if DEBUG
-            return 2
-        #else
-            return 0
-        #endif
-    }
 }

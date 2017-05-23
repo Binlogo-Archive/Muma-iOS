@@ -7,17 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CB0BD5C75333B32F3D1B927 /* Pods_Muma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F17CDEDC41AB48280C95FD /* Pods_Muma.framework */; };
-		642FBE971CBE1A3300F32C27 /* MumaNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBE961CBE1A3300F32C27 /* MumaNetworking.swift */; };
-		642FBE9A1CBE1D1B00F32C27 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBE991CBE1D1B00F32C27 /* Realm.swift */; };
-		642FBE9C1CBE1D8700F32C27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBE9B1CBE1D8700F32C27 /* User.swift */; };
-		642FBE9E1CBE1F0200F32C27 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBE9D1CBE1F0200F32C27 /* Group.swift */; };
-		642FBEA01CBE1F6600F32C27 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBE9F1CBE1F6600F32C27 /* Message.swift */; };
-		642FBEA21CBE1F8A00F32C27 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEA11CBE1F8A00F32C27 /* Conversation.swift */; };
-		642FBEA51CBE25C800F32C27 /* MumaUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEA41CBE25C800F32C27 /* MumaUserDefaults.swift */; };
+		39139D9FAD8014CCDB7B9F20 /* Pods_Muma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E86BDCBAE5EED84F9FF817 /* Pods_Muma.framework */; };
+		58B1388A61D409BD0EC6FA8E /* Pods_MumaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688C2A28D2119F8B37FD6E72 /* Pods_MumaUITests.framework */; };
 		642FBEAC1CBE384D00F32C27 /* MZFayeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEA91CBE384D00F32C27 /* MZFayeClient.m */; };
 		642FBEAD1CBE384D00F32C27 /* MZFayeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEAB1CBE384D00F32C27 /* MZFayeMessage.m */; };
-		642FBEB61CBE399700F32C27 /* FayeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEB51CBE399700F32C27 /* FayeService.swift */; };
 		642FBEB81CBE4CAF00F32C27 /* MumaNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEB71CBE4CAF00F32C27 /* MumaNavigationController.swift */; };
 		642FBEBA1CC0B84A00F32C27 /* MumaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEB91CC0B84A00F32C27 /* MumaAlert.swift */; };
 		642FBEBC1CC0C11B00F32C27 /* MumaAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEBB1CC0C11B00F32C27 /* MumaAsset.swift */; };
@@ -37,7 +30,6 @@
 		642FBEEC1CC1E35700F32C27 /* PlainAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBEEB1CC1E35700F32C27 /* PlainAvatar.swift */; };
 		642FBEEE1CC202A500F32C27 /* TempImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642FBEED1CC202A500F32C27 /* TempImage.xcassets */; };
 		64601F9E1CC20CE700675670 /* MumaUtilKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64601F9D1CC20CE700675670 /* MumaUtilKit.swift */; };
-		646896621CCA23A600D48F6A /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646896611CCA23A600D48F6A /* ParseService.swift */; };
 		648F3FA51CBB2646005B377F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F3FA41CBB2646005B377F /* AppDelegate.swift */; };
 		648F3FAC1CBB2646005B377F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648F3FAB1CBB2646005B377F /* Assets.xcassets */; };
 		648F3FAF1CBB2646005B377F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648F3FAD1CBB2646005B377F /* LaunchScreen.storyboard */; };
@@ -48,10 +40,32 @@
 		648F3FE51CBDF459005B377F /* ShowStepMeetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F3FDA1CBDF459005B377F /* ShowStepMeetViewController.swift */; };
 		648F3FE61CBDF459005B377F /* ShowStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F3FDB1CBDF459005B377F /* ShowStepViewController.swift */; };
 		648F3FE71CBDF459005B377F /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F3FDC1CBDF459005B377F /* ShowViewController.swift */; };
-		648F3FE81CBDF459005B377F /* MumaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F3FDE1CBDF459005B377F /* MumaService.swift */; };
 		648F3FE91CBDF459005B377F /* Show.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648F3FDF1CBDF459005B377F /* Show.xcassets */; };
-		648F3FEA1CBDF459005B377F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648F3FE11CBDF459005B377F /* Main.storyboard */; };
-		648F3FEB1CBDF459005B377F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648F3FE21CBDF459005B377F /* Welcome.storyboard */; };
+		64A631731ED311F900FE6CB4 /* MumaNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 64A631711ED311F900FE6CB4 /* MumaNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64A631761ED311F900FE6CB4 /* MumaNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A6316F1ED311F900FE6CB4 /* MumaNetworking.framework */; };
+		64A631771ED311F900FE6CB4 /* MumaNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 64A6316F1ED311F900FE6CB4 /* MumaNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		64A6317D1ED318E100FE6CB4 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6317C1ED318E100FE6CB4 /* Manager.swift */; };
+		64A631801ED3203700FE6CB4 /* NSURLRequest+cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6317F1ED3203700FE6CB4 /* NSURLRequest+cURL.swift */; };
+		64A631811ED3263200FE6CB4 /* MumaNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642FBE961CBE1A3300F32C27 /* MumaNetworking.swift */; };
+		64A6318B1ED33B2000FE6CB4 /* MumaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 64A631891ED33B2000FE6CB4 /* MumaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64A6318E1ED33B2000FE6CB4 /* MumaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A631871ED33B2000FE6CB4 /* MumaKit.framework */; };
+		64A6318F1ED33B2000FE6CB4 /* MumaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 64A631871ED33B2000FE6CB4 /* MumaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		64A631981ED33B9D00FE6CB4 /* MumaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A631951ED33B9D00FE6CB4 /* MumaService.swift */; };
+		64A6319D1ED34CDC00FE6CB4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6319C1ED34CDC00FE6CB4 /* Config.swift */; };
+		64A631A01ED3CAF800FE6CB4 /* MumaUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6319F1ED3CAF800FE6CB4 /* MumaUserDefaults.swift */; };
+		64A631A41ED3D69800FE6CB4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A631A11ED3D69800FE6CB4 /* Alamofire.framework */; };
+		64A631A51ED3D69800FE6CB4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A631A21ED3D69800FE6CB4 /* Realm.framework */; };
+		64A631A61ED3D69800FE6CB4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A631A31ED3D69800FE6CB4 /* RealmSwift.framework */; };
+		64A631AF1ED3E05900FE6CB4 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A631AA1ED3E05900FE6CB4 /* Conversation.swift */; };
+		64A631B01ED3E05900FE6CB4 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A631AB1ED3E05900FE6CB4 /* Group.swift */; };
+		64A631B11ED3E05900FE6CB4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A631AC1ED3E05900FE6CB4 /* Message.swift */; };
+		64A631B21ED3E05900FE6CB4 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A631AD1ED3E05900FE6CB4 /* Realm.swift */; };
+		64A631B31ED3E05900FE6CB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A631AE1ED3E05900FE6CB4 /* User.swift */; };
+		64A631B41ED45B9700FE6CB4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A631A11ED3D69800FE6CB4 /* Alamofire.framework */; };
+		64A631B51ED45B9700FE6CB4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A631A21ED3D69800FE6CB4 /* Realm.framework */; };
+		64A631B61ED45B9700FE6CB4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A631A31ED3D69800FE6CB4 /* RealmSwift.framework */; };
+		64A631B71ED45BC700FE6CB4 /* MumaNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A6316F1ED311F900FE6CB4 /* MumaNetworking.framework */; };
+		7C7FD69704BD8EA7B11C3020 /* Pods_MumaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C022CDBD2220F09213C41D61 /* Pods_MumaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,24 +83,46 @@
 			remoteGlobalIDString = 648F3FA01CBB2646005B377F;
 			remoteInfo = Muma;
 		};
+		64A631741ED311F900FE6CB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 648F3F991CBB2646005B377F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64A6316E1ED311F900FE6CB4;
+			remoteInfo = MumaNetworking;
+		};
+		64A6318C1ED33B2000FE6CB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 648F3F991CBB2646005B377F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64A631861ED33B2000FE6CB4;
+			remoteInfo = MumaKit;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		64A6317B1ED311F900FE6CB4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				64A631771ED311F900FE6CB4 /* MumaNetworking.framework in Embed Frameworks */,
+				64A6318F1ED33B2000FE6CB4 /* MumaKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		00C8AF3235938ED783AC067B /* Pods-Muma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muma/Pods-Muma.debug.xcconfig"; sourceTree = "<group>"; };
-		59F17CDEDC41AB48280C95FD /* Pods_Muma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B28D2F4DD019E792664118 /* Pods-Muma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muma/Pods-Muma.debug.xcconfig"; sourceTree = "<group>"; };
+		5EAEC44E201C47F95A9A9F65 /* Pods-MumaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MumaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MumaUITests/Pods-MumaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		642FBE961CBE1A3300F32C27 /* MumaNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaNetworking.swift; sourceTree = "<group>"; };
-		642FBE991CBE1D1B00F32C27 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
-		642FBE9B1CBE1D8700F32C27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		642FBE9D1CBE1F0200F32C27 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		642FBE9F1CBE1F6600F32C27 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		642FBEA11CBE1F8A00F32C27 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
-		642FBEA41CBE25C800F32C27 /* MumaUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaUserDefaults.swift; sourceTree = "<group>"; };
 		642FBEA81CBE384D00F32C27 /* MZFayeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFayeClient.h; sourceTree = "<group>"; };
 		642FBEA91CBE384D00F32C27 /* MZFayeClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFayeClient.m; sourceTree = "<group>"; };
 		642FBEAA1CBE384D00F32C27 /* MZFayeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFayeMessage.h; sourceTree = "<group>"; };
 		642FBEAB1CBE384D00F32C27 /* MZFayeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFayeMessage.m; sourceTree = "<group>"; };
 		642FBEB41CBE38EA00F32C27 /* Muma-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Muma-Bridging-Header.h"; sourceTree = "<group>"; };
-		642FBEB51CBE399700F32C27 /* FayeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FayeService.swift; sourceTree = "<group>"; };
 		642FBEB71CBE4CAF00F32C27 /* MumaNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaNavigationController.swift; sourceTree = "<group>"; };
 		642FBEB91CC0B84A00F32C27 /* MumaAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaAlert.swift; sourceTree = "<group>"; };
 		642FBEBB1CC0C11B00F32C27 /* MumaAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaAsset.swift; sourceTree = "<group>"; };
@@ -107,7 +143,6 @@
 		642FBEEB1CC1E35700F32C27 /* PlainAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainAvatar.swift; sourceTree = "<group>"; };
 		642FBEED1CC202A500F32C27 /* TempImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TempImage.xcassets; sourceTree = "<group>"; };
 		64601F9D1CC20CE700675670 /* MumaUtilKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaUtilKit.swift; sourceTree = "<group>"; };
-		646896611CCA23A600D48F6A /* ParseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
 		648F3FA11CBB2646005B377F /* Muma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		648F3FA41CBB2646005B377F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		648F3FAB1CBB2646005B377F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,11 +159,35 @@
 		648F3FDA1CBDF459005B377F /* ShowStepMeetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowStepMeetViewController.swift; sourceTree = "<group>"; };
 		648F3FDB1CBDF459005B377F /* ShowStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowStepViewController.swift; sourceTree = "<group>"; };
 		648F3FDC1CBDF459005B377F /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
-		648F3FDE1CBDF459005B377F /* MumaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaService.swift; sourceTree = "<group>"; };
 		648F3FDF1CBDF459005B377F /* Show.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Show.xcassets; sourceTree = "<group>"; };
-		648F3FE11CBDF459005B377F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		648F3FE21CBDF459005B377F /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
-		7EE927E96EBBADB42034D38D /* Pods-Muma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muma.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muma/Pods-Muma.release.xcconfig"; sourceTree = "<group>"; };
+		64A6316F1ED311F900FE6CB4 /* MumaNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MumaNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A631711ED311F900FE6CB4 /* MumaNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MumaNetworking.h; sourceTree = "<group>"; };
+		64A631721ED311F900FE6CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64A6317C1ED318E100FE6CB4 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		64A6317F1ED3203700FE6CB4 /* NSURLRequest+cURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLRequest+cURL.swift"; sourceTree = "<group>"; };
+		64A631871ED33B2000FE6CB4 /* MumaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MumaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A631891ED33B2000FE6CB4 /* MumaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MumaKit.h; sourceTree = "<group>"; };
+		64A6318A1ED33B2000FE6CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64A631941ED33B9D00FE6CB4 /* FayeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FayeService.swift; sourceTree = "<group>"; };
+		64A631951ED33B9D00FE6CB4 /* MumaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaService.swift; sourceTree = "<group>"; };
+		64A631961ED33B9D00FE6CB4 /* ParseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
+		64A6319C1ED34CDC00FE6CB4 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		64A6319F1ED3CAF800FE6CB4 /* MumaUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MumaUserDefaults.swift; sourceTree = "<group>"; };
+		64A631A11ED3D69800FE6CB4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		64A631A21ED3D69800FE6CB4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		64A631A31ED3D69800FE6CB4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		64A631AA1ED3E05900FE6CB4 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		64A631AB1ED3E05900FE6CB4 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		64A631AC1ED3E05900FE6CB4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		64A631AD1ED3E05900FE6CB4 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		64A631AE1ED3E05900FE6CB4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		688C2A28D2119F8B37FD6E72 /* Pods_MumaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MumaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		881B9ABEC61BA9B2C98FC95C /* Pods-Muma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muma.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muma/Pods-Muma.release.xcconfig"; sourceTree = "<group>"; };
+		959D37461C06DEDB1D22A8F0 /* Pods-MumaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MumaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MumaTests/Pods-MumaTests.release.xcconfig"; sourceTree = "<group>"; };
+		9BFE23B6BC324A469D63230F /* Pods-MumaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MumaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MumaUITests/Pods-MumaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A01630784A41355A1AFD3D6A /* Pods-MumaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MumaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MumaTests/Pods-MumaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4E86BDCBAE5EED84F9FF817 /* Pods_Muma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C022CDBD2220F09213C41D61 /* Pods_MumaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MumaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +195,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CB0BD5C75333B32F3D1B927 /* Pods_Muma.framework in Frameworks */,
+				64A631B41ED45B9700FE6CB4 /* Alamofire.framework in Frameworks */,
+				64A631B51ED45B9700FE6CB4 /* Realm.framework in Frameworks */,
+				64A631B61ED45B9700FE6CB4 /* RealmSwift.framework in Frameworks */,
+				64A6318E1ED33B2000FE6CB4 /* MumaKit.framework in Frameworks */,
+				64A631761ED311F900FE6CB4 /* MumaNetworking.framework in Frameworks */,
+				39139D9FAD8014CCDB7B9F20 /* Pods_Muma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C7FD69704BD8EA7B11C3020 /* Pods_MumaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,39 +216,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B1388A61D409BD0EC6FA8E /* Pods_MumaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A6316B1ED311F900FE6CB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A631831ED33B2000FE6CB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A631B71ED45BC700FE6CB4 /* MumaNetworking.framework in Frameworks */,
+				64A631A41ED3D69800FE6CB4 /* Alamofire.framework in Frameworks */,
+				64A631A51ED3D69800FE6CB4 /* Realm.framework in Frameworks */,
+				64A631A61ED3D69800FE6CB4 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AB5FE256060E6C83EC0DC0D /* Pods */ = {
+		1D15F743C12A687347B400AB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				00C8AF3235938ED783AC067B /* Pods-Muma.debug.xcconfig */,
-				7EE927E96EBBADB42034D38D /* Pods-Muma.release.xcconfig */,
+				07B28D2F4DD019E792664118 /* Pods-Muma.debug.xcconfig */,
+				881B9ABEC61BA9B2C98FC95C /* Pods-Muma.release.xcconfig */,
+				A01630784A41355A1AFD3D6A /* Pods-MumaTests.debug.xcconfig */,
+				959D37461C06DEDB1D22A8F0 /* Pods-MumaTests.release.xcconfig */,
+				5EAEC44E201C47F95A9A9F65 /* Pods-MumaUITests.debug.xcconfig */,
+				9BFE23B6BC324A469D63230F /* Pods-MumaUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		2CF269C8DC59EF0160A9ECF9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				59F17CDEDC41AB48280C95FD /* Pods_Muma.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		642FBE981CBE1D1B00F32C27 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				642FBE991CBE1D1B00F32C27 /* Realm.swift */,
-				642FBE9B1CBE1D8700F32C27 /* User.swift */,
-				642FBE9D1CBE1F0200F32C27 /* Group.swift */,
-				642FBE9F1CBE1F6600F32C27 /* Message.swift */,
-				642FBEA11CBE1F8A00F32C27 /* Conversation.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		642FBEA31CBE259F00F32C27 /* Helpers */ = {
@@ -192,7 +260,6 @@
 				64601F9D1CC20CE700675670 /* MumaUtilKit.swift */,
 				642FBEBF1CC0C26C00F32C27 /* MumaConfig.swift */,
 				642FBEB91CC0B84A00F32C27 /* MumaAlert.swift */,
-				642FBEA41CBE25C800F32C27 /* MumaUserDefaults.swift */,
 				642FBEBB1CC0C11B00F32C27 /* MumaAsset.swift */,
 				642FBEBD1CC0C1BD00F32C27 /* MumaHUD.swift */,
 				642FBEC11CC0C38500F32C27 /* MumaMedia.swift */,
@@ -317,9 +384,11 @@
 				648F3FA31CBB2646005B377F /* Muma */,
 				648F3FB81CBB2646005B377F /* MumaTests */,
 				648F3FC31CBB2646005B377F /* MumaUITests */,
+				64A631701ED311F900FE6CB4 /* MumaNetworking */,
+				64A631881ED33B2000FE6CB4 /* MumaKit */,
 				648F3FA21CBB2646005B377F /* Products */,
-				0AB5FE256060E6C83EC0DC0D /* Pods */,
-				2CF269C8DC59EF0160A9ECF9 /* Frameworks */,
+				1D15F743C12A687347B400AB /* Pods */,
+				7D4CC85473B0F303B3B24302 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -329,6 +398,8 @@
 				648F3FA11CBB2646005B377F /* Muma.app */,
 				648F3FB51CBB2646005B377F /* MumaTests.xctest */,
 				648F3FC01CBB2646005B377F /* MumaUITests.xctest */,
+				64A6316F1ED311F900FE6CB4 /* MumaNetworking.framework */,
+				64A631871ED33B2000FE6CB4 /* MumaKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -340,13 +411,10 @@
 				642FBEB41CBE38EA00F32C27 /* Muma-Bridging-Header.h */,
 				642FBEA61CBE384D00F32C27 /* Vendors */,
 				642FBEA31CBE259F00F32C27 /* Helpers */,
-				642FBE981CBE1D1B00F32C27 /* Models */,
-				648F3FDD1CBDF459005B377F /* Services */,
 				642FBEC31CC0CD1100F32C27 /* Caches */,
 				642FBEC61CC0CDBB00F32C27 /* Extentions */,
 				642FBED61CC0F13900F32C27 /* Views */,
 				648F3FD51CBDF459005B377F /* Controllers */,
-				648F3FE01CBDF459005B377F /* Storyboards */,
 				648F3FAB1CBB2646005B377F /* Assets.xcassets */,
 				648F3FDF1CBDF459005B377F /* Show.xcassets */,
 				642FBEED1CC202A500F32C27 /* TempImage.xcassets */,
@@ -408,43 +476,122 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
-		648F3FDD1CBDF459005B377F /* Services */ = {
+		64A631701ED311F900FE6CB4 /* MumaNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				64A631711ED311F900FE6CB4 /* MumaNetworking.h */,
 				642FBE961CBE1A3300F32C27 /* MumaNetworking.swift */,
-				648F3FDE1CBDF459005B377F /* MumaService.swift */,
-				642FBEB51CBE399700F32C27 /* FayeService.swift */,
-				646896611CCA23A600D48F6A /* ParseService.swift */,
+				64A6317C1ED318E100FE6CB4 /* Manager.swift */,
+				64A6317E1ED3203700FE6CB4 /* Extensions */,
+				64A631721ED311F900FE6CB4 /* Info.plist */,
+			);
+			path = MumaNetworking;
+			sourceTree = "<group>";
+		};
+		64A6317E1ED3203700FE6CB4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				64A6317F1ED3203700FE6CB4 /* NSURLRequest+cURL.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64A631881ED33B2000FE6CB4 /* MumaKit */ = {
+			isa = PBXGroup;
+			children = (
+				64A631891ED33B2000FE6CB4 /* MumaKit.h */,
+				64A6319C1ED34CDC00FE6CB4 /* Config.swift */,
+				64A6319E1ED3CAF800FE6CB4 /* UserDefaults */,
+				64A631931ED33B9D00FE6CB4 /* Services */,
+				64A631A91ED3E05900FE6CB4 /* Persistence */,
+				64A6318A1ED33B2000FE6CB4 /* Info.plist */,
+			);
+			path = MumaKit;
+			sourceTree = "<group>";
+		};
+		64A631931ED33B9D00FE6CB4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				64A631941ED33B9D00FE6CB4 /* FayeService.swift */,
+				64A631951ED33B9D00FE6CB4 /* MumaService.swift */,
+				64A631961ED33B9D00FE6CB4 /* ParseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		648F3FE01CBDF459005B377F /* Storyboards */ = {
+		64A6319E1ED3CAF800FE6CB4 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				648F3FE11CBDF459005B377F /* Main.storyboard */,
-				648F3FE21CBDF459005B377F /* Welcome.storyboard */,
+				64A6319F1ED3CAF800FE6CB4 /* MumaUserDefaults.swift */,
 			);
-			path = Storyboards;
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		64A631A91ED3E05900FE6CB4 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				64A631AD1ED3E05900FE6CB4 /* Realm.swift */,
+				64A631AE1ED3E05900FE6CB4 /* User.swift */,
+				64A631AA1ED3E05900FE6CB4 /* Conversation.swift */,
+				64A631AB1ED3E05900FE6CB4 /* Group.swift */,
+				64A631AC1ED3E05900FE6CB4 /* Message.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		7D4CC85473B0F303B3B24302 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64A631A11ED3D69800FE6CB4 /* Alamofire.framework */,
+				64A631A21ED3D69800FE6CB4 /* Realm.framework */,
+				64A631A31ED3D69800FE6CB4 /* RealmSwift.framework */,
+				B4E86BDCBAE5EED84F9FF817 /* Pods_Muma.framework */,
+				C022CDBD2220F09213C41D61 /* Pods_MumaTests.framework */,
+				688C2A28D2119F8B37FD6E72 /* Pods_MumaUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		64A6316C1ED311F900FE6CB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A631731ED311F900FE6CB4 /* MumaNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A631841ED33B2000FE6CB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A6318B1ED33B2000FE6CB4 /* MumaKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		648F3FA01CBB2646005B377F /* Muma */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 648F3FC91CBB2646005B377F /* Build configuration list for PBXNativeTarget "Muma" */;
 			buildPhases = (
-				54BC74F3036C9445D27ABF94 /* Check Pods Manifest.lock */,
+				942026DDE178754068DD66CF /* [CP] Check Pods Manifest.lock */,
 				648F3F9D1CBB2646005B377F /* Sources */,
 				648F3F9E1CBB2646005B377F /* Frameworks */,
 				648F3F9F1CBB2646005B377F /* Resources */,
-				8DD7852D743DA796F94E4102 /* Embed Pods Frameworks */,
-				437CE04A3D80333589AF6D8C /* Copy Pods Resources */,
+				546F6A649B74A7AE5F54DB8F /* [CP] Embed Pods Frameworks */,
+				825E5F8291834BA6F55CD704 /* [CP] Copy Pods Resources */,
+				64A6317B1ED311F900FE6CB4 /* Embed Frameworks */,
+				64A631A81ED3DFC600FE6CB4 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				64A631751ED311F900FE6CB4 /* PBXTargetDependency */,
+				64A6318D1ED33B2000FE6CB4 /* PBXTargetDependency */,
 			);
 			name = Muma;
 			productName = Muma;
@@ -455,9 +602,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 648F3FCC1CBB2646005B377F /* Build configuration list for PBXNativeTarget "MumaTests" */;
 			buildPhases = (
+				89E33300DB7ECD4E2D235C95 /* [CP] Check Pods Manifest.lock */,
 				648F3FB11CBB2646005B377F /* Sources */,
 				648F3FB21CBB2646005B377F /* Frameworks */,
 				648F3FB31CBB2646005B377F /* Resources */,
+				1665C4B3AE339B4B3E0B7919 /* [CP] Embed Pods Frameworks */,
+				29F8027C53FCD375EA151114 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -473,9 +623,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 648F3FCF1CBB2646005B377F /* Build configuration list for PBXNativeTarget "MumaUITests" */;
 			buildPhases = (
+				0AC0B025536A8A6036A90C45 /* [CP] Check Pods Manifest.lock */,
 				648F3FBC1CBB2646005B377F /* Sources */,
 				648F3FBD1CBB2646005B377F /* Frameworks */,
 				648F3FBE1CBB2646005B377F /* Resources */,
+				B2AB31FDB0C921F890A6F356 /* [CP] Copy Pods Resources */,
+				ACF4D6BF2D84AB43A7A3C751 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -486,6 +639,42 @@
 			productName = MumaUITests;
 			productReference = 648F3FC01CBB2646005B377F /* MumaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		64A6316E1ED311F900FE6CB4 /* MumaNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64A631781ED311F900FE6CB4 /* Build configuration list for PBXNativeTarget "MumaNetworking" */;
+			buildPhases = (
+				64A6316A1ED311F900FE6CB4 /* Sources */,
+				64A6316B1ED311F900FE6CB4 /* Frameworks */,
+				64A6316C1ED311F900FE6CB4 /* Headers */,
+				64A6316D1ED311F900FE6CB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MumaNetworking;
+			productName = MumaNetworking;
+			productReference = 64A6316F1ED311F900FE6CB4 /* MumaNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		64A631861ED33B2000FE6CB4 /* MumaKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64A631901ED33B2000FE6CB4 /* Build configuration list for PBXNativeTarget "MumaKit" */;
+			buildPhases = (
+				64A631821ED33B2000FE6CB4 /* Sources */,
+				64A631831ED33B2000FE6CB4 /* Frameworks */,
+				64A631841ED33B2000FE6CB4 /* Headers */,
+				64A631851ED33B2000FE6CB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MumaKit;
+			productName = MumaKit;
+			productReference = 64A631871ED33B2000FE6CB4 /* MumaKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -499,14 +688,26 @@
 				TargetAttributes = {
 					648F3FA01CBB2646005B377F = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0830;
 					};
 					648F3FB41CBB2646005B377F = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0830;
 						TestTargetID = 648F3FA01CBB2646005B377F;
 					};
 					648F3FBF1CBB2646005B377F = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0830;
 						TestTargetID = 648F3FA01CBB2646005B377F;
+					};
+					64A6316E1ED311F900FE6CB4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					64A631861ED33B2000FE6CB4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -526,6 +727,8 @@
 				648F3FA01CBB2646005B377F /* Muma */,
 				648F3FB41CBB2646005B377F /* MumaTests */,
 				648F3FBF1CBB2646005B377F /* MumaUITests */,
+				64A6316E1ED311F900FE6CB4 /* MumaNetworking */,
+				64A631861ED33B2000FE6CB4 /* MumaKit */,
 			);
 		};
 /* End PBXProject section */
@@ -536,10 +739,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				648F3FAF1CBB2646005B377F /* LaunchScreen.storyboard in Resources */,
-				648F3FEA1CBDF459005B377F /* Main.storyboard in Resources */,
 				648F3FAC1CBB2646005B377F /* Assets.xcassets in Resources */,
 				648F3FE91CBDF459005B377F /* Show.xcassets in Resources */,
-				648F3FEB1CBDF459005B377F /* Welcome.storyboard in Resources */,
 				642FBEEE1CC202A500F32C27 /* TempImage.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,17 +759,107 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		64A6316D1ED311F900FE6CB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A631851ED33B2000FE6CB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		437CE04A3D80333589AF6D8C /* Copy Pods Resources */ = {
+		0AC0B025536A8A6036A90C45 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1665C4B3AE339B4B3E0B7919 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MumaTests/Pods-MumaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29F8027C53FCD375EA151114 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MumaTests/Pods-MumaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		546F6A649B74A7AE5F54DB8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muma/Pods-Muma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64A631A81ED3DFC600FE6CB4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		825E5F8291834BA6F55CD704 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,34 +867,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muma/Pods-Muma-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		54BC74F3036C9445D27ABF94 /* Check Pods Manifest.lock */ = {
+		89E33300DB7ECD4E2D235C95 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8DD7852D743DA796F94E4102 /* Embed Pods Frameworks */ = {
+		942026DDE178754068DD66CF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muma/Pods-Muma-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ACF4D6BF2D84AB43A7A3C751 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MumaUITests/Pods-MumaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2AB31FDB0C921F890A6F356 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MumaUITests/Pods-MumaUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -614,41 +935,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				642FBEAC1CBE384D00F32C27 /* MZFayeClient.m in Sources */,
-				646896621CCA23A600D48F6A /* ParseService.swift in Sources */,
 				642FBEC91CC0CE1100F32C27 /* NSFileManager+Muma.swift in Sources */,
-				642FBE9E1CBE1F0200F32C27 /* Group.swift in Sources */,
 				642FBEBE1CC0C1BD00F32C27 /* MumaHUD.swift in Sources */,
 				642FBEDC1CC0F40400F32C27 /* UserInfoIconCell.swift in Sources */,
 				648F3FE31CBDF459005B377F /* ShowStepGeniusViewController.swift in Sources */,
 				642FBECF1CC0EB4D00F32C27 /* WorkshopViewController.swift in Sources */,
-				642FBE971CBE1A3300F32C27 /* MumaNetworking.swift in Sources */,
 				648F3FE71CBDF459005B377F /* ShowViewController.swift in Sources */,
 				642FBEB81CBE4CAF00F32C27 /* MumaNavigationController.swift in Sources */,
 				648F3FE61CBDF459005B377F /* ShowStepViewController.swift in Sources */,
 				642FBED11CC0EB7900F32C27 /* CraftsmenViewController.swift in Sources */,
 				642FBEEC1CC1E35700F32C27 /* PlainAvatar.swift in Sources */,
-				648F3FE81CBDF459005B377F /* MumaService.swift in Sources */,
 				642FBEE51CC1C45100F32C27 /* UserHeaderView.swift in Sources */,
-				642FBEA51CBE25C800F32C27 /* MumaUserDefaults.swift in Sources */,
 				642FBEC21CC0C38500F32C27 /* MumaMedia.swift in Sources */,
 				642FBEE31CC1C02300F32C27 /* UserInfoViewController.swift in Sources */,
 				648F3FE51CBDF459005B377F /* ShowStepMeetViewController.swift in Sources */,
-				642FBEB61CBE399700F32C27 /* FayeService.swift in Sources */,
 				642FBEDA1CC0F23100F32C27 /* UserInfoTextCell.swift in Sources */,
-				642FBE9A1CBE1D1B00F32C27 /* Realm.swift in Sources */,
 				648F3FA51CBB2646005B377F /* AppDelegate.swift in Sources */,
 				642FBEAD1CBE384D00F32C27 /* MZFayeMessage.m in Sources */,
-				642FBEA01CBE1F6600F32C27 /* Message.swift in Sources */,
 				64601F9E1CC20CE700675670 /* MumaUtilKit.swift in Sources */,
 				642FBED31CC0EB9100F32C27 /* CommunityViewController.swift in Sources */,
 				642FBEC51CC0CD2000F32C27 /* UserAvatar.swift in Sources */,
-				642FBE9C1CBE1D8700F32C27 /* User.swift in Sources */,
 				642FBEC01CC0C26C00F32C27 /* MumaConfig.swift in Sources */,
 				648F3FE41CBDF459005B377F /* ShowStepMatchViewController.swift in Sources */,
 				642FBEE01CC0F74700F32C27 /* UIScrollView+APParallaxHeader.m in Sources */,
 				642FBEBA1CC0B84A00F32C27 /* MumaAlert.swift in Sources */,
 				642FBEBC1CC0C11B00F32C27 /* MumaAsset.swift in Sources */,
-				642FBEA21CBE1F8A00F32C27 /* Conversation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +979,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		64A6316A1ED311F900FE6CB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A631801ED3203700FE6CB4 /* NSURLRequest+cURL.swift in Sources */,
+				64A631811ED3263200FE6CB4 /* MumaNetworking.swift in Sources */,
+				64A6317D1ED318E100FE6CB4 /* Manager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64A631821ED33B2000FE6CB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A631AF1ED3E05900FE6CB4 /* Conversation.swift in Sources */,
+				64A631981ED33B9D00FE6CB4 /* MumaService.swift in Sources */,
+				64A631A01ED3CAF800FE6CB4 /* MumaUserDefaults.swift in Sources */,
+				64A631B21ED3E05900FE6CB4 /* Realm.swift in Sources */,
+				64A631B31ED3E05900FE6CB4 /* User.swift in Sources */,
+				64A631B11ED3E05900FE6CB4 /* Message.swift in Sources */,
+				64A631B01ED3E05900FE6CB4 /* Group.swift in Sources */,
+				64A6319D1ED34CDC00FE6CB4 /* Config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -680,6 +1016,16 @@
 			isa = PBXTargetDependency;
 			target = 648F3FA01CBB2646005B377F /* Muma */;
 			targetProxy = 648F3FC11CBB2646005B377F /* PBXContainerItemProxy */;
+		};
+		64A631751ED311F900FE6CB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64A6316E1ED311F900FE6CB4 /* MumaNetworking */;
+			targetProxy = 64A631741ED311F900FE6CB4 /* PBXContainerItemProxy */;
+		};
+		64A6318D1ED33B2000FE6CB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64A631861ED33B2000FE6CB4 /* MumaKit */;
+			targetProxy = 64A6318C1ED33B2000FE6CB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -780,75 +1126,218 @@
 		};
 		648F3FCA1CBB2646005B377F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00C8AF3235938ED783AC067B /* Pods-Muma.debug.xcconfig */;
+			baseConfigurationReference = 07B28D2F4DD019E792664118 /* Pods-Muma.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Muma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.Muma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Muma/Muma-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		648F3FCB1CBB2646005B377F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EE927E96EBBADB42034D38D /* Pods-Muma.release.xcconfig */;
+			baseConfigurationReference = 881B9ABEC61BA9B2C98FC95C /* Pods-Muma.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Muma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.Muma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Muma/Muma-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		648F3FCD1CBB2646005B377F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A01630784A41355A1AFD3D6A /* Pods-MumaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MumaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.MumaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Muma.app/Muma";
 			};
 			name = Debug;
 		};
 		648F3FCE1CBB2646005B377F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959D37461C06DEDB1D22A8F0 /* Pods-MumaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MumaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.MumaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Muma.app/Muma";
 			};
 			name = Release;
 		};
 		648F3FD01CBB2646005B377F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EAEC44E201C47F95A9A9F65 /* Pods-MumaUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MumaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.MumaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Muma;
 			};
 			name = Debug;
 		};
 		648F3FD11CBB2646005B377F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BFE23B6BC324A469D63230F /* Pods-MumaUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MumaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.MumaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Muma;
+			};
+			name = Release;
+		};
+		64A631791ED311F900FE6CB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MumaNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.MumaNetworking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64A6317A1ED311F900FE6CB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MumaNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.MumaNetworking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		64A631911ED33B2000FE6CB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MumaKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.MumaKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64A631921ED33B2000FE6CB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MumaKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.binboy.MumaKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -887,6 +1376,24 @@
 			buildConfigurations = (
 				648F3FD01CBB2646005B377F /* Debug */,
 				648F3FD11CBB2646005B377F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64A631781ED311F900FE6CB4 /* Build configuration list for PBXNativeTarget "MumaNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A631791ED311F900FE6CB4 /* Debug */,
+				64A6317A1ED311F900FE6CB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64A631901ED33B2000FE6CB4 /* Build configuration list for PBXNativeTarget "MumaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A631911ED33B2000FE6CB4 /* Debug */,
+				64A631921ED33B2000FE6CB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

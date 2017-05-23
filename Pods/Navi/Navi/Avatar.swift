@@ -8,70 +8,76 @@
 
 import Foundation
 
-public func ==(lhs: AvatarStyle, rhs: AvatarStyle) -> Bool {
+public enum AvatarStyle {
 
-    switch (lhs, rhs) {
+    case original
+    case rectangle(size: CGSize)
+    case roundedRectangle(size: CGSize, cornerRadius: CGFloat, borderWidth: CGFloat)
 
-    case (.Original, .Original):
-        return true
-
-    case (.Rectangle(let sizeA), .Rectangle(let sizeB)) where sizeA == sizeB:
-        return true
-
-    case (.RoundedRectangle(let sizeA, let cornerRadiusA, let borderWidthA), .RoundedRectangle(let sizeB, let cornerRadiusB, let borderWidthB)) where (sizeA == sizeB && cornerRadiusA == cornerRadiusB && borderWidthA == borderWidthB):
-        return true
-
-    case (.Free(let nameA, _), .Free(let nameB, _)) where nameA == nameB:
-        return true
-
-    default:
-        return false
-    }
+    public typealias Transform = (UIImage) -> UIImage?
+    case freeform(name: String, transform: Transform)
 }
 
-public enum AvatarStyle: Equatable {
-
-    case Original
-    case Rectangle(size: CGSize)
-    case RoundedRectangle(size: CGSize, cornerRadius: CGFloat, borderWidth: CGFloat)
-
-    public typealias Transform = UIImage -> UIImage?
-    case Free(name: String, transform: Transform)
+extension AvatarStyle {
 
     var hashString: String {
 
         switch self {
 
-        case .Original:
+        case .original:
             return "Original-"
 
-        case .Rectangle(let size):
+        case .rectangle(let size):
             return "Rectangle-\(size)-"
 
-        case .RoundedRectangle(let size, let cornerRadius, let borderWidth):
+        case .roundedRectangle(let size, let cornerRadius, let borderWidth):
             return "RoundedRectangle-\(size)-\(cornerRadius)-\(borderWidth)-"
 
-        case .Free(let name, _):
-            return "Free-\(name)-"
+        case .freeform(let name, _):
+            return "Freeform-\(name)-"
+        }
+    }
+}
+
+extension AvatarStyle: Equatable {
+
+    public static func ==(lhs: AvatarStyle, rhs: AvatarStyle) -> Bool {
+
+        switch (lhs, rhs) {
+
+        case (.original, .original):
+            return true
+
+        case (.rectangle(let sizeA), .rectangle(let sizeB)) where sizeA == sizeB:
+            return true
+
+        case (.roundedRectangle(let sizeA, let cornerRadiusA, let borderWidthA), .roundedRectangle(let sizeB, let cornerRadiusB, let borderWidthB)) where (sizeA == sizeB && cornerRadiusA == cornerRadiusB && borderWidthA == borderWidthB):
+            return true
+
+        case (.freeform(let nameA, _), .freeform(let nameB, _)) where nameA == nameB:
+            return true
+            
+        default:
+            return false
         }
     }
 }
 
 public protocol Avatar {
 
-    var URL: NSURL? { get }
+    var url: URL? { get }
     var style: AvatarStyle { get }
     var placeholderImage: UIImage? { get }
     var localOriginalImage: UIImage? { get }
     var localStyledImage: UIImage? { get }
 
-    func saveOriginalImage(originalImage: UIImage, styledImage: UIImage)
+    func save(originalImage: UIImage, styledImage: UIImage)
 }
 
-extension Avatar {
+public extension Avatar {
 
-    var key: String {
-        return style.hashString + (URL?.absoluteString ?? "")
+    public var key: String {
+        return style.hashString + (url?.absoluteString ?? "")
     }
 }
 

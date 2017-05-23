@@ -12,16 +12,16 @@ class MumaHUD: NSObject {
     static let sharedInstance = MumaHUD()
     
     var isShowing = false
-    var dismissTimer: NSTimer?
+    var dismissTimer: Timer?
     
     lazy var containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         return view
     }()
     
     lazy var activityIndicator: UIActivityIndicatorView = {
-        let view = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+        let view = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
         return view
     }()
     
@@ -29,26 +29,26 @@ class MumaHUD: NSObject {
         showActivityIndicatorWhileBlockingUI(true)
     }
     
-    class func showActivityIndicatorWhileBlockingUI(blockingUI: Bool) {
+    class func showActivityIndicatorWhileBlockingUI(_ blockingUI: Bool) {
         
         if self.sharedInstance.isShowing {
             return // TODO: 或者用新的取代旧的
         }
         
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             if
-                let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate,
+                let appDelegate = UIApplication.shared.delegate as? AppDelegate,
                 let window = appDelegate.window {
                 
                 self.sharedInstance.isShowing = true
                 
-                self.sharedInstance.containerView.userInteractionEnabled = blockingUI
+                self.sharedInstance.containerView.isUserInteractionEnabled = blockingUI
                 
                 self.sharedInstance.containerView.alpha = 0
                 window.addSubview(self.sharedInstance.containerView)
                 self.sharedInstance.containerView.frame = window.bounds
                 
-                UIView.animateWithDuration(0.1, delay: 0.0, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
+                UIView.animate(withDuration: 0.1, delay: 0.0, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
                     self.sharedInstance.containerView.alpha = 1
                     
                     }, completion: { (finished) -> Void in
@@ -57,19 +57,19 @@ class MumaHUD: NSObject {
                         self.sharedInstance.activityIndicator.startAnimating()
                         
                         self.sharedInstance.activityIndicator.alpha = 0
-                        self.sharedInstance.activityIndicator.transform = CGAffineTransformMakeScale(0.0001, 0.0001)
-                        UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
-                            self.sharedInstance.activityIndicator.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                        self.sharedInstance.activityIndicator.transform = CGAffineTransform(scaleX: 0.0001, y: 0.0001)
+                        UIView.animate(withDuration: 0.2, delay: 0.0, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
+                            self.sharedInstance.activityIndicator.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                             self.sharedInstance.activityIndicator.alpha = 1
                             
                             }, completion: { (finished) -> Void in
-                                self.sharedInstance.activityIndicator.transform = CGAffineTransformIdentity
+                                self.sharedInstance.activityIndicator.transform = CGAffineTransform.identity
                                 
                                 if let dismissTimer = self.sharedInstance.dismissTimer {
                                     dismissTimer.invalidate()
                                 }
                                 
-                                self.sharedInstance.dismissTimer = NSTimer.scheduledTimerWithTimeInterval(MumaConfig.forcedHideActivityIndicatorTimeInterval, target: self, selector: #selector(MumaHUD.forcedHideActivityIndicator), userInfo: nil, repeats: false)
+                                self.sharedInstance.dismissTimer = Timer.scheduledTimer(timeInterval: MumaConfig.forcedHideActivityIndicatorTimeInterval, target: self, selector: #selector(MumaHUD.forcedHideActivityIndicator), userInfo: nil, repeats: false)
                         })
                 })
             }
@@ -79,7 +79,7 @@ class MumaHUD: NSObject {
     class func forcedHideActivityIndicator() {
         hideActivityIndicator() {
             if
-                let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate,
+                let appDelegate = UIApplication.shared.delegate as? AppDelegate,
                 let viewController = appDelegate.window?.rootViewController {
                 MumaAlert.alertSorry(message: NSLocalizedString("Wait too long, the operation may not be completed.", comment: ""), inViewController: viewController)
             }
@@ -91,22 +91,22 @@ class MumaHUD: NSObject {
         }
     }
     
-    class func hideActivityIndicator(completion: () -> Void) {
+    class func hideActivityIndicator(_ completion: () -> Void) {
         
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             
             if self.sharedInstance.isShowing {
                 
-                self.sharedInstance.activityIndicator.transform = CGAffineTransformIdentity
+                self.sharedInstance.activityIndicator.transform = CGAffineTransform.identity
                 
-                UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
-                    self.sharedInstance.activityIndicator.transform = CGAffineTransformMakeScale(0.0001, 0.0001)
+                UIView.animate(withDuration: 0.2, delay: 0.0, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
+                    self.sharedInstance.activityIndicator.transform = CGAffineTransform(scaleX: 0.0001, y: 0.0001)
                     self.sharedInstance.activityIndicator.alpha = 0
                     
                     }, completion: { (finished) -> Void in
                         self.sharedInstance.activityIndicator.removeFromSuperview()
                         
-                        UIView.animateWithDuration(0.1, delay: 0.0, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
+                        UIView.animate(withDuration: 0.1, delay: 0.0, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
                             self.sharedInstance.containerView.alpha = 0
                             
                             }, completion: { (finished) -> Void in
