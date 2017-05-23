@@ -25,8 +25,6 @@
 #import "PFFile+Deprecated.h"
 #import "PFFile+Synchronous.h"
 #import "PFFile.h"
-#import "PFFileUploadController.h"
-#import "PFFileUploadResult.h"
 #import "PFGeoPoint.h"
 #import "PFInstallation.h"
 #import "PFNetworkActivityIndicatorManager.h"
