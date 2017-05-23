@@ -9,10 +9,11 @@
 import UIKit
 import Navi
 import RealmSwift
+import MumaKit
 
-let miniAvatarStyle: AvatarStyle = .RoundedRectangle(size: CGSize(width: 60, height: 60), cornerRadius: 30, borderWidth: 0)
-let nanoAvatarStyle: AvatarStyle = .RoundedRectangle(size: CGSize(width: 40, height: 40), cornerRadius: 20, borderWidth: 0)
-let picoAvatarStyle: AvatarStyle = .RoundedRectangle(size: CGSize(width: 30, height: 30), cornerRadius: 15, borderWidth: 0)
+let miniAvatarStyle: AvatarStyle = .roundedRectangle(size: CGSize(width: 60, height: 60), cornerRadius: 30, borderWidth: 0)
+let nanoAvatarStyle: AvatarStyle = .roundedRectangle(size: CGSize(width: 40, height: 40), cornerRadius: 20, borderWidth: 0)
+let picoAvatarStyle: AvatarStyle = .roundedRectangle(size: CGSize(width: 30, height: 30), cornerRadius: 15, borderWidth: 0)
 
 private let screenScale = UIScreen.main.scale
 
@@ -34,7 +35,7 @@ struct UserAvatar {
 
 extension UserAvatar: Navi.Avatar {
     
-    var URL: Foundation.URL? {
+    var url: Foundation.URL? {
         return Foundation.URL(string: avatarURLString)
     }
     
@@ -59,13 +60,11 @@ extension UserAvatar: Navi.Avatar {
     
     var localOriginalImage: UIImage? {
         
-        if let user = user, avatar = user.avatar where avatar.avatarURLString == user.avatarURLString {
+        if let user = user, let avatar = user.avatar, avatar.avatarURLString == user.avatarURLString {
             
-            if let
-                avatarFileURL = FileManager.mumaAvatarURLWithName(avatar.avatarFileName),
-                avatarFilePath = avatarFileURL.path,
-                image = UIImage(contentsOfFile: avatarFilePath) {
-                return image
+            if let avatarFileURL = FileManager.mumaAvatarURLWithName(avatar.avatarFileName) {
+                
+                return UIImage(contentsOfFile: avatarFileURL.path)
             }
         }
         
@@ -77,12 +76,12 @@ extension UserAvatar: Navi.Avatar {
         switch style {
             
         case miniAvatarStyle:
-            if let user = user, avatar = user.avatar where avatar.avatarURLString == user.avatarURLString {
+            if let user = user, let avatar = user.avatar, avatar.avatarURLString == user.avatarURLString {
                 return UIImage(data: avatar.roundMini, scale: screenScale)
             }
             
         case nanoAvatarStyle:
-            if let user = user, avatar = user.avatar where avatar.avatarURLString == user.avatarURLString {
+            if let user = user, let avatar = user.avatar, avatar.avatarURLString == user.avatarURLString {
                 return UIImage(data: avatar.roundNano, scale: screenScale)
             }
             
@@ -93,9 +92,9 @@ extension UserAvatar: Navi.Avatar {
         return nil
     }
     
-    func saveOriginalImage(_ originalImage: UIImage, styledImage: UIImage) {
+    func save(originalImage: UIImage, styledImage: UIImage) {
         
-        guard let user = user, realm = user.realm else {
+        guard let user = user, let realm = user.realm else {
             return
         }
         
@@ -105,7 +104,7 @@ extension UserAvatar: Navi.Avatar {
             needNewAvatar = true
         }
         
-        if let oldAvatar = user.avatar where oldAvatar.avatarURLString != user.avatarURLString {
+        if let oldAvatar = user.avatar, oldAvatar.avatarURLString != user.avatarURLString {
             
             FileManager.deleteAvatarImageWithName(oldAvatar.avatarFileName)
             
@@ -149,7 +148,7 @@ extension UserAvatar: Navi.Avatar {
             
             switch style {
                 
-            case .RoundedRectangle(let size, _, _):
+            case .roundedRectangle(let size, _, _):
                 
                 switch size.width {
                     

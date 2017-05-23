@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwifterSwift
 
 class UserInfoViewController: UIViewController {
     
@@ -15,7 +16,7 @@ class UserInfoViewController: UIViewController {
             myTableView.backgroundColor = UIColor.lightGray
             myTableView.separatorStyle = .singleLine
             myTableView.register(UserInfoIconCell.self, forCellReuseIdentifier: MumaConfig.CellIdentifier.userInfoIconCell)
-            let headerView = UserHeaderView(frame: CGRect(x: 0, y: 0, width: MumaUtilKit.getScreenRect().width, height: MumaConfig.UserInfo.headerViewHeight))
+            let headerView = UserHeaderView(frame: CGRect(x: 0, y: 0, width: SwifterSwift.screenWidth, height: MumaConfig.UserInfo.headerViewHeight))
             myTableView.addParallax(with: headerView, andHeight: headerView.frame.height)
             
             if !isMe {
@@ -28,7 +29,7 @@ class UserInfoViewController: UIViewController {
     lazy var sayHiFooterView:UIView = {
         let button = UIButton(type: .custom)
         button.setTitle("打招呼", for: UIControlState())
-        button.frame = CGRect(x: 0, y: 0, width: MumaUtilKit.getScreenRect().width, height: 50)
+        button.frame = CGRect(x: 0, y: 0, width: SwifterSwift.screenWidth, height: 50)
         button.backgroundColor = UIColor.blue
         button.clipsToBounds = true
         button.layer.cornerRadius = 5

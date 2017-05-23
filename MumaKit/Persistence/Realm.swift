@@ -84,7 +84,7 @@ func normalUsers() -> Results<User> {
     return realm.objects(User.self).filter(predicate)
 }
 
-func userWithUserID(_ userID: String, inRealm realm: Realm) -> User? {
+public func userWithUserID(_ userID: String, inRealm realm: Realm) -> User? {
     let predicate = NSPredicate(format: "userID = %@", userID)
     
     #if DEBUG
@@ -97,17 +97,17 @@ func userWithUserID(_ userID: String, inRealm realm: Realm) -> User? {
     return realm.objects(User.self).filter(predicate).first
 }
 
-func userWithUsername(_ username: String, inRealm realm: Realm) -> User? {
+public func userWithUsername(_ username: String, inRealm realm: Realm) -> User? {
     let predicate = NSPredicate(format: "username = %@", username)
     return realm.objects(User.self).filter(predicate).first
 }
 
-func userWithAvatarURLString(_ avatarURLString: String, inRealm realm: Realm) -> User? {
+public func userWithAvatarURLString(_ avatarURLString: String, inRealm realm: Realm) -> User? {
     let predicate = NSPredicate(format: "avatarURLString = %@", avatarURLString)
     return realm.objects(User.self).filter(predicate).first
 }
 
-func groupWithGroupID(_ groupID: String, inRealm realm: Realm) -> Group? {
+public func groupWithGroupID(_ groupID: String, inRealm realm: Realm) -> Group? {
     let predicate = NSPredicate(format: "groupID = %@", groupID)
     return realm.objects(Group.self).filter(predicate).first
 }
@@ -227,7 +227,7 @@ func messageWithMessageID(_ messageID: String, inRealm realm: Realm) -> Message?
     return messages.first
 }
 
-func avatarWithAvatarURLString(_ avatarURLString: String, inRealm realm: Realm) -> Avatar? {
+public func avatarWithAvatarURLString(_ avatarURLString: String, inRealm realm: Realm) -> Avatar? {
     let predicate = NSPredicate(format: "avatarURLString = %@", avatarURLString)
     return realm.objects(Avatar.self).filter(predicate).first
 }

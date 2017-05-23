@@ -40,7 +40,7 @@ extension FileManager {
         let avatarCachesURL = mumaCachesURL().appendingPathComponent("avatar_caches", isDirectory: true)
         
         do {
-            try fileManager.createDirectory(at: avatarCachesURL!, withIntermediateDirectories: true, attributes: nil)
+            try fileManager.createDirectory(at: avatarCachesURL, withIntermediateDirectories: true, attributes: nil)
             return avatarCachesURL
         } catch _ {
         }
@@ -61,7 +61,7 @@ extension FileManager {
         
         if let avatarURL = mumaAvatarURLWithName(name) {
             let imageData = UIImageJPEGRepresentation(avatarImage, 0.8)
-            if FileManager.default.createFile(atPath: avatarURL.path!, contents: imageData, attributes: nil) {
+            if FileManager.default.createFile(atPath: avatarURL.path, contents: imageData, attributes: nil) {
                 return avatarURL
             }
         }
@@ -87,7 +87,7 @@ extension FileManager {
         let messageCachesURL = mumaCachesURL().appendingPathComponent("message_caches", isDirectory: true)
         
         do {
-            try fileManager.createDirectory(at: messageCachesURL!, withIntermediateDirectories: true, attributes: nil)
+            try fileManager.createDirectory(at: messageCachesURL, withIntermediateDirectories: true, attributes: nil)
             return messageCachesURL
         } catch _ {
         }
@@ -95,7 +95,7 @@ extension FileManager {
         return nil
     }
     
-    // Image
+    // MARK: Image
     
     class func mumaMessageImageURLWithName(_ name: String) -> URL? {
         
@@ -109,7 +109,7 @@ extension FileManager {
     class func saveMessageImageData(_ messageImageData: Data, withName name: String) -> URL? {
         
         if let messageImageURL = mumaMessageImageURLWithName(name) {
-            if FileManager.default.createFile(atPath: messageImageURL.path!, contents: messageImageData, attributes: nil) {
+            if FileManager.default.createFile(atPath: messageImageURL.path, contents: messageImageData, attributes: nil) {
                 return messageImageURL
             }
         }
@@ -131,7 +131,7 @@ extension FileManager {
         }
     }
     
-    // Audio
+    // MARK: Audio
     
     class func mumaMessageAudioURLWithName(_ name: String) -> URL? {
         
@@ -145,7 +145,7 @@ extension FileManager {
     class func saveMessageAudioData(_ messageAudioData: Data, withName name: String) -> URL? {
         
         if let messageAudioURL = mumaMessageAudioURLWithName(name) {
-            if FileManager.default.createFile(atPath: messageAudioURL.path!, contents: messageAudioData, attributes: nil) {
+            if FileManager.default.createFile(atPath: messageAudioURL.path, contents: messageAudioData, attributes: nil) {
                 return messageAudioURL
             }
         }
@@ -167,7 +167,7 @@ extension FileManager {
         }
     }
     
-    // Video
+    // MARK: Video
     
     class func mumaMessageVideoURLWithName(_ name: String) -> URL? {
         
@@ -181,7 +181,7 @@ extension FileManager {
     class func saveMessageVideoData(_ messageVideoData: Data, withName name: String) -> URL? {
         
         if let messageVideoURL = mumaMessageVideoURLWithName(name) {
-            if FileManager.default.createFile(atPath: messageVideoURL.path!, contents: messageVideoData, attributes: nil) {
+            if FileManager.default.createFile(atPath: messageVideoURL.path, contents: messageVideoData, attributes: nil) {
                 return messageVideoURL
             }
         }

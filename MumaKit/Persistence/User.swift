@@ -19,11 +19,11 @@ public enum UserFriendState: Int {
 }
 
 public class Avatar: Object {
-    dynamic var avatarURLString: String = ""
-    dynamic var avatarFileName: String = ""
+    public dynamic var avatarURLString: String = ""
+    public dynamic var avatarFileName: String = ""
     
-    dynamic var roundMini: Data = Data() // 60
-    dynamic var roundNano: Data = Data() // 40
+    public dynamic var roundMini: Data = Data() // 60
+    public dynamic var roundNano: Data = Data() // 40
     
     let users = LinkingObjects(fromType: User.self, property: "avatar")
     var user: User? {
@@ -31,21 +31,21 @@ public class Avatar: Object {
     }
 }
 
-class UserSocialAccountProvider: Object {
+public class UserSocialAccountProvider: Object {
     dynamic var name: String = ""
     dynamic var enabled: Bool = false
 }
 
-class User: Object {
-    dynamic var userID: String = ""
-    dynamic var username: String = ""
-    dynamic var nickname: String = ""
-    dynamic var introduction: String = ""
-    dynamic var avatarURLString: String = ""
-    dynamic var avatar: Avatar?
-    dynamic var badge: String = ""
+public class User: Object {
+    public dynamic var userID: String = ""
+    public dynamic var username: String = ""
+    public dynamic var nickname: String = ""
+    public dynamic var introduction: String = ""
+    public dynamic var avatarURLString: String = ""
+    public dynamic var avatar: Avatar?
+    public dynamic var badge: String = ""
     
-    override class func indexedProperties() -> [String] {
+    override public class func indexedProperties() -> [String] {
         return ["userID"]
     }
     

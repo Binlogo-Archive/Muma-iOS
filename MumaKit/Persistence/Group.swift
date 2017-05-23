@@ -15,7 +15,7 @@ enum GroupType: Int {
     case `private`    = 1
 }
 
-class Group: Object {
+public class Group: Object {
     dynamic var groupID: String = ""
     dynamic var groupName: String = ""
     dynamic var notificationEnabled: Bool = true

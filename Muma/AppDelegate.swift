@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.customAppearance()
         
-        FayeService.sharedManager.startConnect()
-        ParseServer.sharedManager.startConnect()
+//        FayeService.sharedManager.startConnect()
+//        ParseServer.sharedManager.startConnect()
         
         return true
     }

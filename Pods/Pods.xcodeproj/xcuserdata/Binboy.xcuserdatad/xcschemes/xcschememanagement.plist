@@ -94,6 +94,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwifterSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -107,12 +112,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0012D2E40EAF7642D834E0FEFE6DF060</key>
+		<key>1A36848511CC028976566F407BD448AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>25C2D09A536A3B0E79F07D2A99E2EC44</key>
+		<key>2A39F24E9D41A59DB502DACA42655D0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,22 +137,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>38375E990E86AE1D59573223ACC6619E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4986F7D116A2F3EF1C65F7966CA83AAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CEC7A550DB0FEDE6A0DA848F1EF3CDB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4D10E4FF5A483B852B47CCA0B994E340</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4F07C9250BA42A9946D20B770DB7A691</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>5E73C2EDB239F12B477FB75D4ADD8FF6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>619AA15746273C9698AC8EDBEC4F3E84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -162,7 +172,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0CA97EB353058CD01071EE8FFA144C1</key>
+		<key>75C78E18CB0A52CB411294DD65DCA32F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -172,7 +182,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BA21AA7BD94826209508C4EB783333A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BD5BFC2F630B07DE8A20EBC90A7C8D49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C21DE401AAF30002D778A6864E2C344E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -183,16 +203,6 @@
 			<true/>
 		</dict>
 		<key>CF601C1E7BD08953B77433904ECBA273</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DDD35A5F4940C60A75A7A1487842B5A4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EBCFB1D711A64850436111C82A135351</key>
 		<dict>
 			<key>primary</key>
 			<true/>

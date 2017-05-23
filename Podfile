@@ -19,6 +19,7 @@ def pods
     pod 'Base64'
     pod 'MonkeyKing'
     pod 'Fabric'
+    pod 'SwifterSwift'
 end
 
 target 'Muma' do

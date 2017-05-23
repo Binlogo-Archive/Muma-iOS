@@ -29,7 +29,7 @@ class MumaAlert {
         }
     }
     
-    class func alertSorry(message: String?, inViewController viewController: UIViewController?, withDismissAction dismissAction: () -> Void) {
+    class func alertSorry(message: String?, inViewController viewController: UIViewController?, withDismissAction dismissAction: @escaping () -> Void) {
         alert(title: NSLocalizedString("Sorry", comment: ""), message: message, dismissTitle: NSLocalizedString("OK", comment: ""), inViewController: viewController, withDismissAction: dismissAction)
     }
     
@@ -37,7 +37,7 @@ class MumaAlert {
         alert(title: NSLocalizedString("Sorry", comment: ""), message: message, dismissTitle: NSLocalizedString("OK", comment: ""), inViewController: viewController, withDismissAction: nil)
     }
     
-    class func textInput(title: String, placeholder: String?, oldText: String?, dismissTitle: String, inViewController viewController: UIViewController?, withFinishedAction finishedAction: ((text: String) -> Void)?) {
+    class func textInput(title: String, placeholder: String?, oldText: String?, dismissTitle: String, inViewController viewController: UIViewController?, withFinishedAction finishedAction: ((_ text: String) -> Void)?) {
         
         DispatchQueue.main.async {
             
@@ -50,8 +50,8 @@ class MumaAlert {
             
             let action: UIAlertAction = UIAlertAction(title: dismissTitle, style: .default) { action -> Void in
                 if let finishedAction = finishedAction {
-                    if let textField = alertController.textFields?.first, text = textField.text {
-                        finishedAction(text: text)
+                    if let textField = alertController.textFields?.first, let text = textField.text {
+                        finishedAction(text)
                     }
                 }
             }
@@ -61,7 +61,7 @@ class MumaAlert {
         }
     }
     
-    class func textInput(title: String, message: String?, placeholder: String?, oldText: String?, confirmTitle: String, cancelTitle: String, inViewController viewController: UIViewController?, withConfirmAction confirmAction: ((text: String) -> Void)?, cancelAction: (() -> Void)?) {
+    class func textInput(title: String, message: String?, placeholder: String?, oldText: String?, confirmTitle: String, cancelTitle: String, inViewController viewController: UIViewController?, withConfirmAction confirmAction: ((_ text: String) -> Void)?, cancelAction: (() -> Void)?) {
         
         DispatchQueue.main.async {
             
@@ -78,8 +78,8 @@ class MumaAlert {
             alertController.addAction(_cancelAction)
             
             let _confirmAction: UIAlertAction = UIAlertAction(title: confirmTitle, style: .default) { action -> Void in
-                if let textField = alertController.textFields?.first, text = textField.text {
-                    confirmAction?(text: text)
+                if let textField = alertController.textFields?.first, let text = textField.text {
+                    confirmAction?(text)
                 }
             }
             alertController.addAction(_confirmAction)
@@ -88,7 +88,7 @@ class MumaAlert {
         }
     }
     
-    class func confirmOrCancel(title: String, message: String, confirmTitle: String, cancelTitle: String, inViewController viewController: UIViewController?, withConfirmAction confirmAction: () -> Void, cancelAction: () -> Void) {
+    class func confirmOrCancel(title: String, message: String, confirmTitle: String, cancelTitle: String, inViewController viewController: UIViewController?, withConfirmAction confirmAction: @escaping () -> Void, cancelAction: @escaping () -> Void) {
         
         DispatchQueue.main.async {
             
@@ -171,9 +171,9 @@ extension UIViewController {
         }
     }
 
-    func showProposeMessageIfNeedForContactsAndTryPropose(_ propose: Propose) {
+    func showProposeMessageIfNeedForContactsAndTryPropose(_ propose: @escaping Propose) {
         
-        if PrivateResource.Contacts.isNotDeterminedAuthorization {
+        if PrivateResource.contacts.isNotDeterminedAuthorization {
             
             DispatchQueue.main.async {
                 

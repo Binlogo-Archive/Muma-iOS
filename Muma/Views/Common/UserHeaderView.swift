@@ -8,6 +8,7 @@
 
 import UIKit
 import Navi
+import MumaKit
 
 class UserHeaderView: UIView {
 
@@ -38,7 +39,7 @@ class UserHeaderView: UIView {
         return label;
     }()
     
-    func configView(withUser user:User) {
+    func configView(withUser user: User) {
         
     }
     

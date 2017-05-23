@@ -91,7 +91,7 @@ class MumaHUD: NSObject {
         }
     }
     
-    class func hideActivityIndicator(_ completion: () -> Void) {
+    class func hideActivityIndicator(_ completion: @escaping () -> Void) {
         
         DispatchQueue.main.async {
             

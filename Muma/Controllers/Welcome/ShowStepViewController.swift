@@ -77,7 +77,7 @@ class ShowStepViewController: UIViewController {
         path.addLine(to: endPoint)
         
         repeatAnimate(view, alongWithPath: path, duration: duration, autoreverses: true)
-        repeatRotate(view, fromValue: -0.1, toValue: 0.1, duration: duration)
+        repeatRotate(view, fromValue: -0.1 as AnyObject, toValue: 0.1 as AnyObject, duration: duration)
     }
     
     fileprivate func repeatRotate(_ view: UIView, fromValue: AnyObject, toValue: AnyObject, duration: CFTimeInterval) {
